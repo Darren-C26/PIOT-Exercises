@@ -18,7 +18,7 @@ Please click the link before to be directed to the CDA repository.
 URL: https://github.com/Darren-C26/piot-python-components/tree/labmodule01
 
 ## UML Design Diagram(s)
-![CDA UML](image-6.png)
+![CDA Implementation UML](image-6.png)
 <p style="text-align: center;">CDA Implementation UML</p>
 
 ## Unit Tests Executed
@@ -59,5 +59,4 @@ Importing test modules ... done.
 Ran 1 test in 0.001s
 
 OK
-
 ```
