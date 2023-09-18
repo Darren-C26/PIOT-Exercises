@@ -3,14 +3,16 @@
 ## Lab Module 01
 
 ## Description
-NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
-
 ### What does your implementation do?
+A Gateway Device Application, or GDA, is a software application that acts as an intermediary between IoT devices (ie. constrained devices) and a cloud/edge-computing infrastructure. In particular, the GDA faciliates the communication and the exchange of data between the CDA and the cloud.
 
-
-This lab focuses on getting the configuration environments correctly set up for the project, hence the implemenetation for the first iteration is simple in design. For this module, the implementation interfaces with a configuration utility named <b>ConfigUtil</b>. This utility wrapper (which is part of the Apache Commons configuration architecture) is used for managing the configuration settings within the application (app/system/environemt-specific configurations etc.). In the context of this application, the 
+This lab focuses on getting the configuration environments correctly set up for the project, hence the implemenetation for the first iteration is simple in design. For this module, the GDA interfaces with a configuration utility named <b>ConfigUtil</b>. This utility wrapper (which is part of the Apache Commons configuration architecture) is used for managing the configuration settings within the application (app/system/environemt-specific configurations etc.).
 
 ### How does your implementation work?
+
+The ConfigUtil class initializes by setting a configuration file name (can be set as a property or given the default name) and loads the configuration data from this file into an INIConfiguration object. The configuration settings are stored as properties, which are retrieved through various methods provided by the ConfigUtil class. It also includes methods to load and return credentials from seperate credential files.
+
+In the GDA's constructor, the initialization process begins with a call to the <b>initConfig</b> method. This method is responsible for loading the configuration file, and it uses the ConfigUtil class to manage the configuration settings. Additionally, the parseArgs command is used to parse command line arguments, allowing for a custom configuration file name to override the default settings provided by ConfigUtil.
 
 ## Code Repository and Branch
 Please click the link before to be directed to the GDA repository.
