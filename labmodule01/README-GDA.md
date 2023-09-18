@@ -8,6 +8,8 @@ NOTE: Include two full paragraphs describing your implementation approach by ans
 ### What does your implementation do?
 
 
+This lab focuses on getting the configuration environments correctly set up for the project, hence the implemenetation for the first iteration is simple in design. For this module, the implementation interfaces with a configuration utility named <b>ConfigUtil</b>. This utility wrapper (which is part of the Apache Commons configuration architecture) is used for managing the configuration settings within the application (app/system/environemt-specific configurations etc.). In the context of this application, the 
+
 ### How does your implementation work?
 
 ## Code Repository and Branch
