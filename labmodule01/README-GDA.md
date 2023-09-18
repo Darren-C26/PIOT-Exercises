@@ -2,9 +2,6 @@
 
 ## Lab Module 01
 
-
-# PIOT - Java Components Module01
-
 ## Description
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
@@ -38,7 +35,7 @@ Test Execution Sample (Using Maven):
 ![SystemMemUtilTaskTest](image-5.png)
 
 ## Integration Tests Executed
-The integration tests for the GDA are listed below.
+The integration tests for the <b>GDA</b> are listed below.
 
 #### Required:
  - GatewayDeviceAppTest
