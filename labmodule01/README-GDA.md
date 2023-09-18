@@ -2,48 +2,50 @@
 
 ## Lab Module 01
 
-Be sure to implement all the PIOT-GDA-* issues (requirements) listed at [PIOT-INF-01-001 - Lab Module 01](https://github.com/orgs/programming-the-iot/projects/1#column-9974937).
 
-### Description
+# PIOT - Java Components Module01
 
+## Description
 NOTE: Include two full paragraphs describing your implementation approach by answering the questions listed below.
 
-What does your implementation do? 
-
-How does your implementation work?
-
-### Code Repository and Branch
-
-NOTE: Be sure to include the branch (e.g. https://github.com/programming-the-iot/python-components/tree/alpha001).
-
-URL: 
-
-### UML Design Diagram(s)
-
-NOTE: Include one or more UML designs representing your solution. It's expected each
-diagram you provide will look similar to, but not the same as, its counterpart in the
-book [Programming the IoT](https://learning.oreilly.com/library/view/programming-the-internet/9781492081401/).
+### What does your implementation do?
 
 
-### Unit Tests Executed
+### How does your implementation work?
 
-NOTE: TA's will execute your unit tests. You only need to list each test case below
-(e.g. ConfigUtilTest, DataUtilTest, etc). Be sure to include all previous tests, too,
-since you need to ensure you haven't introduced regressions.
+## Code Repository and Branch
+Please click the link before to be directed to the GDA repository.
 
-- 
-- 
-- 
+URL: https://github.com/Darren-C26/piot-java-components/tree/labmodule01
 
-### Integration Tests Executed
+## UML Design Diagram(s)
+NOTE: Include one or more UML designs representing your solution. It's expected each diagram you provide will look similar to, but not the same as, its counterpart in the book Programming the IoT.
 
-NOTE: TA's will execute most of your integration tests using their own environment, with
-some exceptions (such as your cloud connectivity tests). In such cases, they'll review
-your code to ensure it's correct. As for the tests you execute, you only need to list each
-test case below (e.g. SensorSimAdapterManagerTest, DeviceDataManagerTest, etc.)
+## Unit Tests Executed
+The unit tests executed for the <b>GDA</b> are listed below.
+#### Required:
+ - ConfigUtilTest
 
-- 
-- 
-- 
+#### Other Tests:
+ - ResourceNameTest
+ - SystemCpuUtilTaskTest
+ - SystemMemUtilTaskTest
 
-EOF.
+Test Execution Sample (Using Maven):
+![ConfigUtilTest](image-2.png)
+![ResourceNameTest](image-3.png)
+![SystemCpuUtilTaskTest](image-4.png)
+![SystemMemUtilTaskTest](image-5.png)
+
+## Integration Tests Executed
+The integration tests for the GDA are listed below.
+
+#### Required:
+ - GatewayDeviceAppTest
+
+#### Other Tests:
+ - SystemPerformanceManagerTest
+
+Text Execution Sample (using Maven):
+![GatewayDeviceAppTest](image.png)
+![SystemPerformanceManagerTest](image-1.png)
