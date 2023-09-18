@@ -10,7 +10,7 @@ This lab focuses on getting the configuration environments correctly set up for 
 
 ### How does your implementation work?
 
-The ConfigUtil class initializes by setting a configuration file name (can be set as a property or given the default name) and loads the configuration data from this file into an INIConfiguration object. The configuration settings are stored as properties, which are retrieved through various methods provided by the ConfigUtil class. It also includes methods to load and return credentials from seperate credential files.
+The ConfigUtil class initializes by setting a configuration file name (can be set as a property or given the default name) and loads the configuration data from this file into an <b>INIConfiguration</b> object. The configuration settings are stored as properties, which are retrieved through various methods provided by the ConfigUtil class. It also includes methods to load and return credentials from seperate credential files.
 
 In the GDA's constructor, the initialization process begins with a call to the <b>initConfig</b> method. This method is responsible for loading the configuration file, and it uses the ConfigUtil class to manage the configuration settings. Additionally, the parseArgs command is used to parse command line arguments, allowing for a custom configuration file name to override the default settings provided by ConfigUtil.
 
