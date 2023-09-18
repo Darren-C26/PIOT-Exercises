@@ -18,13 +18,17 @@ Please click the link before to be directed to the GDA repository.
 URL: https://github.com/Darren-C26/piot-java-components/tree/labmodule01
 
 ## UML Design Diagram(s)
-NOTE: Include one or more UML designs representing your solution. It's expected each diagram you provide will look similar to, but not the same as, its counterpart in the book Programming the IoT.
+![GDA Implementation UML](image-7.png)
+<p style="text-align: center;">GDA Implementation UML</p>
 
 ## Unit Tests Executed
 The unit tests executed for the <b>GDA</b> are listed below.
 #### Required:
  - ConfigUtilTest
-
+```
+Sep. 17, 2023 10:34:55 P.M. programmingtheiot.common.ConfigUtil getCredentials
+INFO: Successfully loaded credentials from file: ./src/test/java/programmingtheiot/part01/unit/common/DummyCredFile.props
+```
 #### Other Tests:
  - ResourceNameTest
  - SystemCpuUtilTaskTest
@@ -41,6 +45,18 @@ The integration tests for the <b>GDA</b> are listed below.
 
 #### Required:
  - GatewayDeviceAppTest
+```
+Sep. 17, 2023 10:33:15 P.M. programmingtheiot.gda.app.GatewayDeviceApp <init>
+INFO: Initializing GDA...
+Sep. 17, 2023 10:33:15 P.M. programmingtheiot.gda.app.GatewayDeviceApp parseArgs
+INFO: No command line args to parse.
+Sep. 17, 2023 10:33:15 P.M. programmingtheiot.gda.app.GatewayDeviceApp initConfig
+INFO: Attempting to load configuration: Default.
+Sep. 17, 2023 10:33:15 P.M. programmingtheiot.gda.app.GatewayDeviceApp startApp
+INFO: Starting GDA...
+Sep. 17, 2023 10:33:15 P.M. programmingtheiot.gda.app.GatewayDeviceApp startApp
+INFO: GDA started successfully.
+```
 
 #### Other Tests:
  - SystemPerformanceManagerTest
