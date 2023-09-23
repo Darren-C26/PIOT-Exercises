@@ -82,7 +82,7 @@ INFO: Test 5: Memory Util: 0.19753087
 The integration tests for the <b>GDA</b> are listed below.
 
 <details close>
-<summary>GatewayDeviceAppTest<summary>
+<summary>GatewayDeviceAppTest</summary>
 
 ```
 Sep. 22, 2023 8:29:43 P.M. programmingtheiot.gda.app.GatewayDeviceApp <init>
@@ -109,7 +109,7 @@ INFO: GDA stopped successfully with exit code 0.
 <br>
 
 <details close>
-<summary>SystemPerformanceManagerTest<summary>
+<summary>SystemPerformanceManagerTest</summary>
 
 ```
 Sep. 22, 2023 7:29:30 P.M. programmingtheiot.gda.system.SystemPerformanceManager startManager
