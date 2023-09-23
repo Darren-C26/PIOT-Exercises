@@ -43,7 +43,7 @@ Test Execution Sample:
 ## Integration Tests Executed
 The integration tests for the <b>CDA</b> are listed below.
 
- - GatewayDeviceAppTest
+ - ConstrainedDeviceAppTest
 
 Text Execution Sample:
 ```
