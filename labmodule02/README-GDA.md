@@ -6,13 +6,12 @@
 ### What does your implementation do?
 A Gateway Device Application, or GDA, is a software application that acts as an intermediary between IoT devices (ie. constrained devices) and a cloud/edge-computing infrastructure. In particular, the GDA faciliates the communication and the exchange of data between the CDA and the cloud.
 
-This lab focuses on getting the configuration environments correctly set up for the project, hence the implemenetation for the first iteration is simple in design. For this module, the GDA interfaces with a configuration utility named <b>ConfigUtil</b>. This utility wrapper (which is part of the Apache Commons configuration architecture) is used for managing the configuration settings within the application (app/system/environemt-specific configurations etc.).
-
+This lab builds upon the tasks performed in the previous module. - environment configuration and interfacing the GDA with the <b>ConfigUtil</b> utility. This module introduces a few more classes, namely, the <b>SystemPerformanceManager</b> class, the <b>BaseSystemUtilTask</b> class, the <b>SystemCpuUtilTask</b> class, and the <b>SystemMemUtilTask</b> class. These classes work together to collect and monitor the system performance data on the gateway device (specifically the CPU and memory utilization for this module). Descriptions for these classes are provided in the [ReadMe-CDA](https://github.com/Darren-C26/PIOT-SOFE4610U-Grp8/blob/default/labmodule01/README-CDA.md#what-does-your-implementation-do) file, and a brief breakdown is provided below.
 ### How does your implementation work?
 
-The ConfigUtil class initializes by setting a configuration file name (can be set as a property or given the default name) and loads the configuration data from this file into an <b>INIConfiguration</b> object. The configuration settings are stored as properties, which are retrieved through various methods provided by the ConfigUtil class. It also includes methods to load and return credentials from seperate credential files.
+The <b>ConfigUtil</b> class initializes by setting a configuration file name (can be set as a property or given the default name) and loads the configuration data from this file into an <b>INIConfiguration</b> object. The configuration settings are stored as properties, which are retrieved through various methods provided by the ConfigUtil class.
 
-In the GDA's constructor, the initialization process begins with a call to the <b>initConfig</b> method. This method is responsible for loading the configuration file, and it uses the ConfigUtil class to manage the configuration settings. Additionally, the parseArgs command is used to parse command line arguments, allowing for a custom configuration file name to override the default settings provided by ConfigUtil.
+Upon booting up the GDA application, an instance of the <b>SystemPerformanceManager</b> class is created to monitor the system performance metrics. This class uses ConfigUtil to retrieve the polling rate from the configuration settings. This polling rate is used to determine the frequency at which the telemetry data is to be collected. If the configuration value is unavailable, a default value is used.<b>SystemCpuUtilTask</b> and <b>SystemMemUtilTask</b> are created to monitor the CPU and memory utiliaztion. The polling rate is used to schedule these tasks at a fixed rate. The <b>SystemPerformanceManager.handleTelemetry</b> method is responsible for collecting the telemetry data from these two classes, and logging them to the console. In the <b>getTelemetryValue</b> method in the <b>SystemCpuUtilTask</b> class, the <b>ManagementFactory</b> class is used in conjunction with the <b>getSystemLoadAverage</b> method from the <b>OperatingSystemMXbean</b> class to retrieve the system load average. For the same method in the <b>SystemCpuUtilTask</b> class, the <b>ManagementFactory</b> class is used alongside the <b>getheapMemoryUsage</b> method from the <b>MemoryMXbean</b> class to retrieve the used and maximum memory metrics. An equation is used to calculate the memory utilization (double memUtil = (memUsed / memMax) * 100.0). The <b>BaseSystemUtilTask</b> is an abstract class that provides a common interface for the various utility tasks of the application. The GDA logs its activities and system performance metrics to the console, then stops the performance monitoring task and shuts down when it needs to stop.
 
 ## Code Repository and Branch
 Please click the link before to be directed to the GDA repository.
@@ -20,8 +19,11 @@ Please click the link before to be directed to the GDA repository.
 URL: https://github.com/Darren-C26/piot-java-components/tree/labmodule02
 
 ## UML Design Diagram(s)
+<p align="center">
 
-<p style="text-align: center;">GDA Implementation UML</p>
+![GDA Implementation UML (Module02)](image-2.png)</p>
+
+<p align="center">GDA Implementation UML (Module02)</p>
 
 ## Unit Tests Executed
 The unit tests executed for the <b>GDA</b> are listed below. Sample test executions can be seen by clicking on the dropdown icon.
