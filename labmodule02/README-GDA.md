@@ -24,7 +24,7 @@ URL: https://github.com/Darren-C26/piot-java-components/tree/labmodule02
 <p style="text-align: center;">GDA Implementation UML</p>
 
 ## Unit Tests Executed
-The unit tests executed for the <b>GDA</b> are listed below.
+The unit tests executed for the <b>GDA</b> are listed below. Sample test executions can be seen by clicking on the dropdown icon.
 
 #### Required:
 
@@ -79,7 +79,7 @@ INFO: Test 5: Memory Util: 0.19753087
 
 
 ## Integration Tests Executed
-The integration tests for the <b>GDA</b> are listed below.
+The integration tests for the <b>GDA</b> are listed below. Sample test executions can be seen by clicking on the dropdown icon.
 
 <details close>
 <summary>GatewayDeviceAppTest</summary>
