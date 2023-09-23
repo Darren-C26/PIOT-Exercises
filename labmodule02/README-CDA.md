@@ -7,11 +7,11 @@
 ### What does your implementation do?
 A Constrained Device Application, or CDA, is a software application that runs on a "constrained" (ie. resource-limited) device. The purpose of the CDA is to gather sensor data, control actuators, and communicate this information to other devices.
 
-In the context of this project, the CDA is designed to collect temperature, humidity, and pressure data from sensors. However, as this is the first module, only shell implementations have been provided. The components that were observed for this module include the <b>ConstrainedDeviceApp</b> class and the <b>ConfigUtil</b> class. ConfigUtil is a configuration utility used to manage the configuration settings of the application.
+In the context of this project, the CDA is designed to collect temperature, humidity, and pressure data from sensors. However, as this is the second module, the application has not been implemented completely. The components that were observed for this module include the <b>ConstrainedDeviceApp</b> class, the <b>ConfigUtil</b> class, the <b>SystemPerformanceManager</b> class, the <b>BaseSystemUtilTask</b> class, the <b>SystemCpuUtilTask</b> class, and the <b>SystemMemUtilTask</b> class. <b>ConfigUtil</b> is a configuration utility used to manage the configuration settings of the application.<b>SystemPerformanceManager</b> is responsible for coordinating performance monitoring tasks for the system.<b>SystemCpuUtilTask</b> and <b>SystemMemUtilTask</b> are in charge of monitoring the CPU and memory utiliaztion respectively. The abstract class <b>BaseSystemUtilTask</b> provides a common interface for the various utility tasks of the application.
 
 ### How does your implementation work?
 
-The ConfigUtil class is used for managing configuration settings for the CDA. It can be initialized with a specified configuration file name (or will use the default one). It provides methods to retrieve configuration values, checks for the existence of keys and sections in the configuration file, and can load separate credential files. The CDA requires certain configuration settings to behave a certain way. Upon initializing, it will make a call to ConfigUtil for it to retrieve configuration parameters required for runtime.
+When the CDA is initialized, it creates an instance of the <b>SystemPerformanceManager</b> class, which will serve as the primary manager for the performance monitoring. When the <b>startApp</b> method is called, the SystemPerformanceManager instance initiates (via <b>SystemPerformanceManager.startManager</b>) the monitoring of the performance metrics. In particular, this implementation monitors the CPU and memory utilization (via <b>SystemPerformanceManager.handleTelemetry</b>). After running for the specified time, the <b>stopApp</b> method will be called, which stops the SystemPerformanceManager instance (via <b>SystemPerformanceManager.stopManager</b>) and halts the monitoring of the CPU and memory metrics. Logs are used in the application to indicate the intialization, starting, and stopping of the CDA, as well as performance metrics that were obtained from the SystemPerformanceManager instance.
 
 ## Code Repository and Branch
 Please click the link before to be directed to the CDA repository.
@@ -20,7 +20,11 @@ URL: https://github.com/Darren-C26/piot-python-components/tree/labmodule02
 
 ## UML Design Diagram(s)
 
-<p style="text-align: center;">CDA Implementation UML</p>
+<p align="center">
+
+![CDA Implementation UML (Module02)](image-1.png)</p>
+
+<p align="center">CDA Implementation UML (Module02)</p>
 
 ## Unit Tests Executed
 The unit tests executed for the <b>CDA</b> are listed below. Sample test executions can be seen by clicking on the dropdown icon.
