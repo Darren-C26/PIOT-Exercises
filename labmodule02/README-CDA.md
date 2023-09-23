@@ -81,7 +81,7 @@ OK
 <br>
 
 ## Integration Tests Executed
-The integration tests for the <b>CDA</b> are listed below.
+The integration tests for the <b>CDA</b> are listed below. Sample test executions can be seen by clicking on the dropdown icon.
 
 <details close>
 <summary>ConstrainedDeviceAppTest</summary>
@@ -90,30 +90,30 @@ The integration tests for the <b>CDA</b> are listed below.
 Finding files... done.
 Importing test modules ... done.
 
-2023-09-22 20:44:04,019:root:INFO:Testing ConstrainedDeviceApp class...
-2023-09-22 20:44:04,019:root:INFO:Initializing CDA...
-2023-09-22 20:44:04,019:root:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-09-22 20:44:04,027:root:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-09-22 20:44:04,028:root:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001EED861A380>
-2023-09-22 20:44:04,028:tzlocal:DEBUG:Looking up time zone info from registry
-2023-09-22 20:44:04,053:apscheduler.scheduler:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2023-09-22 20:44:04,054:root:INFO:Starting CDA...
-2023-09-22 20:44:04,054:root:INFO:Starting SystemPerformanceManager...
-2023-09-22 20:44:04,056:apscheduler.scheduler:INFO:Added job "SystemPerformanceManager.handleTelemetry" to job store "default"
-2023-09-22 20:44:04,056:apscheduler.scheduler:INFO:Scheduler started
-2023-09-22 20:44:04,057:apscheduler.scheduler:DEBUG:Looking for jobs to run
-2023-09-22 20:44:04,057:apscheduler.scheduler:DEBUG:Next wakeup is due at 2023-09-22 20:44:09.053672-04:00 (in 4.995731 seconds)
-2023-09-22 20:44:04,057:root:INFO:Started SystemPerformanceManager.
-2023-09-22 20:44:04,057:root:INFO:CDA started.
-2023-09-22 20:44:04,057:root:INFO:CDA stopping...
-2023-09-22 20:44:04,057:root:INFO:Stopping SystemPerformanceManager...
-2023-09-22 20:44:04,057:apscheduler.scheduler:INFO:Scheduler has been shut down
-2023-09-22 20:44:04,058:apscheduler.scheduler:DEBUG:Looking for jobs to run
-2023-09-22 20:44:04,058:apscheduler.scheduler:DEBUG:No jobs; waiting until a job is added
-2023-09-22 20:44:04,058:root:INFO:Stopped SystemPerformanceManager.
-2023-09-22 20:44:04,058:root:INFO:CDA stopped with exit code 0.
+2023-09-22 21:59:26,688:root:INFO:Testing ConstrainedDeviceApp class...
+2023-09-22 21:59:26,688:root:INFO:Initializing CDA...
+2023-09-22 21:59:26,689:root:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-09-22 21:59:26,690:root:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-09-22 21:59:26,691:root:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x0000028C9E5FD210>
+2023-09-22 21:59:26,691:tzlocal:DEBUG:Looking up time zone info from registry
+2023-09-22 21:59:26,700:apscheduler.scheduler:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-22 21:59:26,700:root:INFO:Starting CDA...
+2023-09-22 21:59:26,700:root:INFO:Starting SystemPerformanceManager...
+2023-09-22 21:59:26,702:apscheduler.scheduler:INFO:Added job "SystemPerformanceManager.handleTelemetry" to job store "default"
+2023-09-22 21:59:26,702:apscheduler.scheduler:INFO:Scheduler started
+2023-09-22 21:59:26,703:apscheduler.scheduler:DEBUG:Looking for jobs to run
+2023-09-22 21:59:26,703:root:INFO:Started SystemPerformanceManager.
+2023-09-22 21:59:26,703:apscheduler.scheduler:DEBUG:Next wakeup is due at 2023-09-22 21:59:31.700163-04:00 (in 4.997001 seconds)
+2023-09-22 21:59:26,703:root:INFO:CDA started.
+2023-09-22 21:59:26,703:root:INFO:CDA stopping...
+2023-09-22 21:59:26,703:root:INFO:Stopping SystemPerformanceManager...
+2023-09-22 21:59:26,703:apscheduler.scheduler:INFO:Scheduler has been shut down
+2023-09-22 21:59:26,704:apscheduler.scheduler:DEBUG:Looking for jobs to run
+2023-09-22 21:59:26,704:apscheduler.scheduler:DEBUG:No jobs; waiting until a job is added
+2023-09-22 21:59:26,704:root:INFO:Stopped SystemPerformanceManager.
+2023-09-22 21:59:26,704:root:INFO:CDA stopped with exit code 0.
 ----------------------------------------------------------------------
-Ran 1 test in 0.039s
+Ran 1 test in 0.016s
 
 OK
 ```
@@ -128,30 +128,30 @@ OK
 Finding files... done.
 Importing test modules ... done.
 
-2023-09-22 21:22:00,333:SystemPerformanceManagerTest:INFO:Testing SystemPerformanceManager class...
-2023-09-22 21:22:00,333:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-09-22 21:22:00,334:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-09-22 21:22:00,334:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x00000232D455B880>
-2023-09-22 21:22:00,334:win32:DEBUG:Looking up time zone info from registry
-2023-09-22 21:22:00,343:base:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2023-09-22 21:22:00,343:SystemPerformanceManager:INFO:Starting SystemPerformanceManager...
-2023-09-22 21:22:00,345:base:INFO:Added job "SystemPerformanceManager.handleTelemetry" to job store "default"
-2023-09-22 21:22:00,345:base:INFO:Scheduler started
-2023-09-22 21:22:00,345:base:DEBUG:Looking for jobs to run
-2023-09-22 21:22:00,346:SystemPerformanceManager:INFO:Started SystemPerformanceManager.
-2023-09-22 21:22:00,346:base:DEBUG:Next wakeup is due at 2023-09-22 21:22:05.343262-04:00 (in 4.996998 seconds)
-2023-09-22 21:22:05,357:base:DEBUG:Looking for jobs to run
-2023-09-22 21:22:05,358:base:INFO:Running job "SystemPerformanceManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-09-22 21:22:05 EDT)" (scheduled at 2023-09-22 21:22:05.343262-04:00)
-2023-09-22 21:22:05,359:SystemPerformanceManager:DEBUG:CPU utilization is 14.6 percent, and memory utilization is None percent.
-2023-09-22 21:22:05,359:base:INFO:Job "SystemPerformanceManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-09-22 21:22:05 EDT)" executed successfully
-2023-09-22 21:22:05,360:base:DEBUG:Next wakeup is due at 2023-09-22 21:22:10.343262-04:00 (in 4.982601 seconds)
-2023-09-22 21:22:06,349:SystemPerformanceManager:INFO:Stopping SystemPerformanceManager...
-2023-09-22 21:22:06,350:base:INFO:Scheduler has been shut down
-2023-09-22 21:22:06,350:base:DEBUG:Looking for jobs to run
-2023-09-22 21:22:06,350:base:DEBUG:No jobs; waiting until a job is added
-2023-09-22 21:22:06,350:SystemPerformanceManager:INFO:Stopped SystemPerformanceManager.
+2023-09-22 21:57:17,446:SystemPerformanceManagerTest:INFO:Testing SystemPerformanceManager class...
+2023-09-22 21:57:17,447:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-09-22 21:57:17,455:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-09-22 21:57:17,455:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x0000015CF34A9150>
+2023-09-22 21:57:17,455:win32:DEBUG:Looking up time zone info from registry
+2023-09-22 21:57:17,478:base:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-09-22 21:57:17,479:SystemPerformanceManager:INFO:Starting SystemPerformanceManager...
+2023-09-22 21:57:17,481:base:INFO:Added job "SystemPerformanceManager.handleTelemetry" to job store "default"
+2023-09-22 21:57:17,481:base:INFO:Scheduler started
+2023-09-22 21:57:17,482:base:DEBUG:Looking for jobs to run
+2023-09-22 21:57:17,482:base:DEBUG:Next wakeup is due at 2023-09-22 21:57:22.478575-04:00 (in 4.995996 seconds)
+2023-09-22 21:57:17,482:SystemPerformanceManager:INFO:Started SystemPerformanceManager.
+2023-09-22 21:57:22,479:base:DEBUG:Looking for jobs to run
+2023-09-22 21:57:22,479:base:INFO:Running job "SystemPerformanceManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-09-22 21:57:22 EDT)" (scheduled at 2023-09-22 21:57:22.478575-04:00)
+2023-09-22 21:57:22,489:SystemPerformanceManager:DEBUG:CPU utilization is 14.7 percent, and memory utilization is 91.8 percent.
+2023-09-22 21:57:22,489:base:INFO:Job "SystemPerformanceManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-09-22 21:57:22 EDT)" executed successfully
+2023-09-22 21:57:22,489:base:DEBUG:Next wakeup is due at 2023-09-22 21:57:27.478575-04:00 (in 4.989389 seconds)
+2023-09-22 21:57:23,490:SystemPerformanceManager:INFO:Stopping SystemPerformanceManager...
 ----------------------------------------------------------------------
-Ran 1 test in 6.018s
+Ran 1 test in 6.045s2023-09-22 21:57:23,490:base:INFO:Scheduler has been shut down
+2023-09-22 21:57:23,490:base:DEBUG:Looking for jobs to run
+2023-09-22 21:57:23,490:base:DEBUG:No jobs; waiting until a job is added
+2023-09-22 21:57:23,491:SystemPerformanceManager:INFO:Stopped SystemPerformanceManager.
+
 
 OK
 ```
