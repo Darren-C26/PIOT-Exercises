@@ -19,7 +19,6 @@ Please click the link before to be directed to the CDA repository.
 URL: https://github.com/Darren-C26/piot-python-components/tree/labmodule02
 
 ## UML Design Diagram(s)
-
 <p align="center">
 
 ![CDA Implementation UML (Module02)](image-1.png)</p>
