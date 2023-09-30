@@ -17,7 +17,7 @@ The CDA uses simulated sensors to generate sensor data for testing. In particula
 
 Similary, the CDA also contains simulated actuators - these are the instances of the <b>ActuatorSimTask</b> and <b>HvacActuatorSimTask</b> class. Another class named <b>ActuatorAdapterManager</b> is used to handle actuator command responses.
  
- Logs are used in the application to indicate the intialization, starting, and stopping of the CDA, as well as performance metrics that were obtained from the SystemPerformanceManager instance.
+ Logs are used in the application to indicate the intialization, starting, and stopping of the CDA, as well as activities performed by the APScheduler.
 
 ## Code Repository and Branch
 Please click the link before to be directed to the CDA repository.
