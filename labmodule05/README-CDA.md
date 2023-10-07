@@ -956,3 +956,114 @@ OK
 
 <b>New Tests Executed:</b>
 
+<details close>
+<summary>DataIntegrationTest</summary>
+```
+Finding files... done.
+Importing test modules ... done.
+
+2023-10-07 00:00:23,865:DataIntegrationTest:INFO:Running DataIntegrationTest test cases...
+2023-10-07 00:00:23,865:DataUtil:INFO:Created DataUtil instance.
+2023-10-07 00:00:23,865:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-10-07 00:00:23,867:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-10-07 00:00:23,867:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x0000019EAE4F28C0>
+2023-10-07 00:00:23,867:DataIntegrationTest:INFO:================================================
+2023-10-07 00:00:23,868:DataIntegrationTest:INFO:DataIntegrationTest test execution...
+2023-10-07 00:00:23,868:DataIntegrationTest:INFO:================================================
+2023-10-07 00:00:23,868:DataIntegrationTest:INFO:
+
+----- [ActuatorData JSON from file to object] -----
+2023-10-07 00:00:23,876:DataUtil:WARNING:JSON data contains key not mappable to object: timeStampMillis
+2023-10-07 00:00:23,877:DataIntegrationTest:INFO:ActuatorData JSON from GDA: {"command":0,"value":0.0,"isResponse":false,"stateData":"","name":"Not Set","timeStamp":"2023-10-07T03:51:20.941837300Z","statusCode":0,"typeID":0,"locationID":"gatewaydevice001","latitude":0.0,"longitude":0.0,"elevation":0.0,"timeStampMillis":1696650680941}
+2023-10-07 00:00:23,877:DataIntegrationTest:INFO:ActuatorData object: name=Not Set,typeID=0,timeStamp=2023-10-07T03:51:20.941837300Z,statusCode=0,hasError=False,locationID=gatewaydevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-07 00:00:23,877:DataIntegrationTest:INFO:================================================
+2023-10-07 00:00:23,877:DataIntegrationTest:INFO:DataIntegrationTest test execution...
+2023-10-07 00:00:23,877:DataIntegrationTest:INFO:================================================
+2023-10-07 00:00:23,877:DataIntegrationTest:INFO:
+
+----- [SensorData JSON from file to object] -----
+2023-10-07 00:00:23,885:DataUtil:WARNING:JSON data contains key not mappable to object: timeStampMillis
+2023-10-07 00:00:23,885:DataIntegrationTest:INFO:SensorData JSON from GDA: {"value":0.0,"name":"Not Set","timeStamp":"2023-10-07T03:51:20.946854400Z","statusCode":0,"typeID":0,"locationID":"gatewaydevice001","latitude":0.0,"longitude":0.0,"elevation":0.0,"timeStampMillis":1696650680946}
+2023-10-07 00:00:23,885:DataIntegrationTest:INFO:SensorData object: name=Not Set,typeID=0,timeStamp=2023-10-07T03:51:20.946854400Z,statusCode=0,hasError=False,locationID=gatewaydevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-07 00:00:23,886:DataIntegrationTest:INFO:================================================
+2023-10-07 00:00:23,886:DataIntegrationTest:INFO:DataIntegrationTest test execution...
+2023-10-07 00:00:23,886:DataIntegrationTest:INFO:================================================
+2023-10-07 00:00:23,886:DataIntegrationTest:INFO:
+
+----- [SystemPerformanceData JSON from file to object] -----
+2023-10-07 00:00:23,895:DataUtil:WARNING:JSON data contains key not mappable to object: timeStampMillis
+2023-10-07 00:00:23,895:DataIntegrationTest:INFO:SystemPerformanceData JSON from GDA: {"cpuUtil":0.0,"diskUtil":0.0,"memUtil":0.0,"name":"SysPerfData","timeStamp":"2023-10-07T03:51:20.928839900Z","statusCode":0,"typeID":0,"locationID":"gatewaydevice001","latitude":0.0,"longitude":0.0,"elevation":0.0,"timeStampMillis":1696650680928}
+2023-10-07 00:00:23,895:DataIntegrationTest:INFO:SystemPerformanceData object: name=SysPerfData,typeID=0,timeStamp=2023-10-07T03:51:20.928839900Z,statusCode=0,hasError=False,locationID=gatewaydevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-07 00:00:23,895:DataIntegrationTest:INFO:================================================
+2023-10-07 00:00:23,895:DataIntegrationTest:INFO:DataIntegrationTest test execution...
+2023-10-07 00:00:23,895:DataIntegrationTest:INFO:================================================
+2023-10-07 00:00:23,895:DataIntegrationTest:INFO:
+
+----- [ActuatorData to JSON to file] -----
+2023-10-07 00:00:23,895:DataIntegrationTest:INFO:Sample ActuatorData JSON (validated): {
+    "timeStamp": "2023-10-07T04:00:23.895907+00:00",
+    "hasError": false,
+    "name": "Not Set",
+    "typeID": 0,
+    "statusCode": 0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "elevation": 0.0,
+    "locationID": "constraineddevice001",
+    "value": 0.0,
+    "command": 0,
+    "stateData": "",
+    "isResponse": false
+}
+2023-10-07 00:00:23,895:DataIntegrationTest:INFO:Writing ActuatorData JSON to CDA data path: /tmp/cda-data/ActuatorData.dat
+2023-10-07 00:00:23,897:DataIntegrationTest:INFO:================================================
+2023-10-07 00:00:23,897:DataIntegrationTest:INFO:DataIntegrationTest test execution...
+2023-10-07 00:00:23,897:DataIntegrationTest:INFO:================================================
+2023-10-07 00:00:23,897:DataIntegrationTest:INFO:
+
+----- [SensorData to JSON to file] -----
+2023-10-07 00:00:23,899:DataIntegrationTest:INFO:Sample SensorData JSON (validated): {
+    "timeStamp": "2023-10-07T04:00:23.897906+00:00",
+    "hasError": false,
+    "name": "Not Set",
+    "typeID": 0,
+    "statusCode": 0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "elevation": 0.0,
+    "locationID": "constraineddevice001",
+    "value": 0.0,
+    "command": 0,
+    "stateData": "",
+    "isResponse": false
+}
+2023-10-07 00:00:23,899:DataIntegrationTest:INFO:Writing SensorData JSON to CDA data path: /tmp/cda-data/SensorData.dat
+2023-10-07 00:00:23,900:DataIntegrationTest:INFO:================================================
+2023-10-07 00:00:23,901:DataIntegrationTest:INFO:DataIntegrationTest test execution...
+2023-10-07 00:00:23,901:DataIntegrationTest:INFO:================================================
+2023-10-07 00:00:23,901:DataIntegrationTest:INFO:
+
+----- [SystemPerformanceData to JSON to file] -----
+2023-10-07 00:00:23,901:DataIntegrationTest:INFO:Sample SystemPerformanceData JSON (validated): {
+    "timeStamp": "2023-10-07T04:00:23.901991+00:00",
+    "hasError": false,
+    "name": "SystemPerfMsg",
+    "typeID": 9000,
+    "statusCode": 0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "elevation": 0.0,
+    "locationID": "constraineddevice001",
+    "cpuUtil": 0.0,
+    "memUtil": 0.0,
+    "diskUtil": 0.0
+}
+2023-10-07 00:00:23,901:DataIntegrationTest:INFO:Writing SystemPerformanceData JSON to CDA data path: /tmp/cda-data/SystemPerformanceData.dat
+----------------------------------------------------------------------
+Ran 6 tests in 0.039s
+
+OK
+```
+</details>
+
+<br>
