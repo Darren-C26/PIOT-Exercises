@@ -90,7 +90,6 @@ OK
 
 <br>
 
-<b>New Tests Executed:</b>
 <details close>
 <summary>ActuatorDataTest</summary>
 
@@ -316,6 +315,11 @@ OK (skipped=1)
 </details>
 <br>
 
+
+<b>New Tests Executed:</b>
+
+
+
 ## Integration Tests Executed
 The integration tests for the <b>CDA</b> are listed below. Sample test executions can be seen by clicking on the dropdown icon.
 
@@ -423,7 +427,6 @@ OK
 </details>
 <br>
 
-<b>New Tests Executed:</b>
 
 <details close>
 <summary>SensorAdapterManagerTest</summary>
@@ -703,3 +706,7 @@ OK
 
 </details>
 <br>
+
+
+<b>New Tests Executed:</b>
+
