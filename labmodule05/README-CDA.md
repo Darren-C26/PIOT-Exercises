@@ -11,13 +11,7 @@ This module's primary focus is on establishing a shared data format between the 
 
 ### How does your implementation work?
 
-When the CDA is initialized, it creates an instance of the <b>DeviceDataManager</b> class and starts it. This class acts as the primary interface in the CDA - it manages the data collection and acutation activities for the application. It will also be used to communicate with the GDA, as will be seen in future modules.
-
-The CDA uses simulated sensors to generate sensor data for testing. In particular, humidity, pressure, and tempmerature values are simulated by their respective classes (<b>HumiditySensorSimTask</b>, <b>PressureSensorSimTask</b>, and <b>TemperatureSensorSimTask</b> respectively). A class called <b>SensorAdapterManager</b> is used to managing and simulating the behavior of the sensors. It periodically generates sensor data and contains <b>DataMessageListeners</b> to recieve this data.
-
-Similary, the CDA also contains simulated actuators - these are the instances of the <b>ActuatorSimTask</b> and <b>HvacActuatorSimTask</b> class. Another class named <b>ActuatorAdapterManager</b> is used to handle actuator command responses.
- 
- Logs are used in the application to indicate the intialization, starting, and stopping of the CDA, as well as activities performed by the APScheduler.
+The implementation strategy revolves around the extension of pre-existing data container classes, specifically <b>ActuatorData</b>, <b>SensorData</b>, and <b>SystemPerformanceData</b>, to incorporate <b>JSON</b> conversion capabilities. In this context, the introduction of the <b>DataUtil" class is pivotal for managing the conversion process. For each data container category, such as ActuatorData, the <b>DataUtil</b> class houses two essential methods: one dedicated to transforming the data container into JSON format (<b>ActuatorDataToJson</b>) and another responsible for reversing the conversion, converting JSON data back into the corresponding data container (<b>jsonToActuatorData</b>). The execution of these functions relies on Python's inherent JSON library to execute the conversion process seamlessly.
 
 ## Code Repository and Branch
 Please click the link before to be directed to the <b>CDA</b> repository.
