@@ -317,7 +317,253 @@ OK (skipped=1)
 
 
 <b>New Tests Executed:</b>
+<details close>
+<summary>DataUtilTest</summary>
+```
+Finding files... done.
+Importing test modules ... done.
 
+2023-10-06 23:59:19,249:DataUtilTest:INFO:Testing DataUtil class...
+2023-10-06 23:59:19,249:DataUtil:INFO:Created DataUtil instance.
+2023-10-06 23:59:19,249:DataUtilTest:INFO:================================================
+2023-10-06 23:59:19,250:DataUtilTest:INFO:DataUtil test execution...
+2023-10-06 23:59:19,250:DataUtilTest:INFO:================================================
+2023-10-06 23:59:19,250:DataUtilTest:INFO:
+
+----- [ActuatorData Conversions from JSON] -----
+2023-10-06 23:59:19,250:DataUtil:WARNING:JSON data is empty or null. Returning null.
+2023-10-06 23:59:19,250:DataUtil:WARNING:JSON data is empty or null. Returning null.
+2023-10-06 23:59:19,250:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-10-06 23:59:19,251:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-10-06 23:59:19,251:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x00000157C3841CC0>
+2023-10-06 23:59:19,252:DataUtilTest:INFO:Sample JSON: {
+    "timeStamp": "2023-10-07T03:59:19.250697+00:00",
+    "hasError": false,
+    "name": "FooBar ActuatorData",
+    "typeID": 0,
+    "statusCode": 0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "elevation": 0.0,
+    "locationID": "constraineddevice001",
+    "value": 0.0,
+    "command": 0,
+    "stateData": "",
+    "isResponse": false
+}
+2023-10-06 23:59:19,252:DataUtilTest:INFO:JSON to ActuatorData: name=FooBar ActuatorData,typeID=0,timeStamp=2023-10-07T03:59:19.250697+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-06 23:59:19,252:DataUtilTest:INFO:ActuatorData back to JSON: {
+    "timeStamp": "2023-10-07T03:59:19.250697+00:00",
+    "hasError": false,
+    "name": "FooBar ActuatorData",
+    "typeID": 0,
+    "statusCode": 0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "elevation": 0.0,
+    "locationID": "constraineddevice001",
+    "value": 0.0,
+    "command": 0,
+    "stateData": "",
+    "isResponse": false
+}
+2023-10-06 23:59:19,252:DataUtilTest:INFO:================================================
+2023-10-06 23:59:19,253:DataUtilTest:INFO:DataUtil test execution...
+2023-10-06 23:59:19,253:DataUtilTest:INFO:================================================
+2023-10-06 23:59:19,253:DataUtilTest:INFO:
+
+----- [JSON Conversions from ActuatorData] -----
+2023-10-06 23:59:19,254:DataUtilTest:INFO:Sample ActuatorData: name=FooBar2 Actuator,typeID=0,timeStamp=2023-10-07T03:59:19.253698+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-06 23:59:19,254:DataUtilTest:INFO:ActuatorData to JSON: {
+    "timeStamp": "2023-10-07T03:59:19.253698+00:00",
+    "hasError": false,
+    "name": "FooBar2 Actuator",
+    "typeID": 0,
+    "statusCode": 0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "elevation": 0.0,
+    "locationID": "constraineddevice001",
+    "value": 0.0,
+    "command": 0,
+    "stateData": "",
+    "isResponse": false
+}
+2023-10-06 23:59:19,254:DataUtilTest:INFO:JSON back to ActuatorData: name=FooBar2 Actuator,typeID=0,timeStamp=2023-10-07T03:59:19.253698+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-06 23:59:19,254:DataUtilTest:INFO:ActuatorData back to JSON: {
+    "timeStamp": "2023-10-07T03:59:19.253698+00:00",
+    "hasError": false,
+    "name": "FooBar2 Actuator",
+    "typeID": 0,
+    "statusCode": 0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "elevation": 0.0,
+    "locationID": "constraineddevice001",
+    "value": 0.0,
+    "command": 0,
+    "stateData": "",
+    "isResponse": false
+}
+2023-10-06 23:59:19,254:DataUtilTest:INFO:================================================
+2023-10-06 23:59:19,254:DataUtilTest:INFO:DataUtil test execution...
+2023-10-06 23:59:19,254:DataUtilTest:INFO:================================================
+2023-10-06 23:59:19,254:DataUtilTest:INFO:
+
+----- [SensorData Conversions from JSON] -----
+2023-10-06 23:59:19,254:DataUtil:WARNING:JSON data is empty or null. Returning null.
+2023-10-06 23:59:19,254:DataUtil:WARNING:JSON data is empty or null. Returning null.
+2023-10-06 23:59:19,255:DataUtilTest:INFO:Sample JSON: {
+    "timeStamp": "2023-10-07T03:59:19.255717+00:00",
+    "hasError": false,
+    "name": "FooBar SensorData",
+    "typeID": 0,
+    "statusCode": 0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "elevation": 0.0,
+    "locationID": "constraineddevice001",
+    "value": 0.0,
+    "command": 0,
+    "stateData": "",
+    "isResponse": false
+}
+2023-10-06 23:59:19,255:DataUtilTest:INFO:JSON to SensorData: name=FooBar SensorData,typeID=0,timeStamp=2023-10-07T03:59:19.255717+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-06 23:59:19,255:DataUtilTest:INFO:SensorData back to JSON: {
+    "timeStamp": "2023-10-07T03:59:19.255717+00:00",
+    "hasError": false,
+    "name": "FooBar SensorData",
+    "typeID": 0,
+    "statusCode": 0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "elevation": 0.0,
+    "locationID": "constraineddevice001",
+    "value": 0.0,
+    "command": 0,
+    "stateData": "",
+    "isResponse": false
+}
+2023-10-06 23:59:19,255:DataUtilTest:INFO:================================================
+2023-10-06 23:59:19,256:DataUtilTest:INFO:DataUtil test execution...
+2023-10-06 23:59:19,256:DataUtilTest:INFO:================================================
+2023-10-06 23:59:19,256:DataUtilTest:INFO:
+
+----- [JSON Conversions from SensorData] -----
+2023-10-06 23:59:19,256:DataUtilTest:INFO:Sample SensorData: name=Foobar2 Sensor,typeID=0,timeStamp=2023-10-07T03:59:19.256696+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-06 23:59:19,256:DataUtilTest:INFO:SensorData to JSON: {
+    "timeStamp": "2023-10-07T03:59:19.256696+00:00",
+    "hasError": false,
+    "name": "Foobar2 Sensor",
+    "typeID": 0,
+    "statusCode": 0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "elevation": 0.0,
+    "locationID": "constraineddevice001",
+    "value": 0.0,
+    "command": 0,
+    "stateData": "",
+    "isResponse": false
+}
+2023-10-06 23:59:19,256:DataUtilTest:INFO:JSON back to SensorData: name=Foobar2 Sensor,typeID=0,timeStamp=2023-10-07T03:59:19.256696+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-06 23:59:19,256:DataUtilTest:INFO:SensorData back to JSON: {
+    "timeStamp": "2023-10-07T03:59:19.256696+00:00",
+    "hasError": false,
+    "name": "Foobar2 Sensor",
+    "typeID": 0,
+    "statusCode": 0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "elevation": 0.0,
+    "locationID": "constraineddevice001",
+    "value": 0.0,
+    "command": 0,
+    "stateData": "",
+    "isResponse": false
+}
+2023-10-06 23:59:19,256:DataUtilTest:INFO:================================================
+2023-10-06 23:59:19,257:DataUtilTest:INFO:DataUtil test execution...
+2023-10-06 23:59:19,257:DataUtilTest:INFO:================================================
+2023-10-06 23:59:19,257:DataUtilTest:INFO:
+
+----- [SystemPerformanceData Conversions from JSON] -----
+2023-10-06 23:59:19,257:DataUtil:WARNING:JSON data is empty or null. Returning null.
+2023-10-06 23:59:19,257:DataUtil:WARNING:JSON data is empty or null. Returning null.
+2023-10-06 23:59:19,257:DataUtilTest:INFO:Sample JSON: {
+    "timeStamp": "2023-10-07T03:59:19.257696+00:00",
+    "hasError": false,
+    "name": "FooBar SystemPerformanceData",
+    "typeID": 9000,
+    "statusCode": 0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "elevation": 0.0,
+    "locationID": "constraineddevice001",
+    "cpuUtil": 0.0,
+    "memUtil": 0.0,
+    "diskUtil": 0.0
+}
+2023-10-06 23:59:19,257:DataUtilTest:INFO:JSON to SystemPerformanceData: name=FooBar SystemPerformanceData,typeID=9000,timeStamp=2023-10-07T03:59:19.257696+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-06 23:59:19,257:DataUtilTest:INFO:SystemPerformanceData back to JSON: {
+    "timeStamp": "2023-10-07T03:59:19.257696+00:00",
+    "hasError": false,
+    "name": "FooBar SystemPerformanceData",
+    "typeID": 9000,
+    "statusCode": 0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "elevation": 0.0,
+    "locationID": "constraineddevice001",
+    "cpuUtil": 0.0,
+    "memUtil": 0.0,
+    "diskUtil": 0.0
+}
+2023-10-06 23:59:19,258:DataUtilTest:INFO:================================================
+2023-10-06 23:59:19,258:DataUtilTest:INFO:DataUtil test execution...
+2023-10-06 23:59:19,258:DataUtilTest:INFO:================================================
+2023-10-06 23:59:19,258:DataUtilTest:INFO:
+
+----- [JSON Conversions from SystemPerformanceData] -----
+2023-10-06 23:59:19,259:DataUtilTest:INFO:Sample SystemPerformanceData: name=Foobar2 SystemPerformanceData,typeID=9000,timeStamp=2023-10-07T03:59:19.258698+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-06 23:59:19,259:DataUtilTest:INFO:SystemPerformanceData to JSON: {
+    "timeStamp": "2023-10-07T03:59:19.258698+00:00",
+    "hasError": false,
+    "name": "Foobar2 SystemPerformanceData",
+    "typeID": 9000,
+    "statusCode": 0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "elevation": 0.0,
+    "locationID": "constraineddevice001",
+    "cpuUtil": 0.0,
+    "memUtil": 0.0,
+    "diskUtil": 0.0
+}
+2023-10-06 23:59:19,259:DataUtilTest:INFO:JSON back to SystemPerformanceData: name=Foobar2 SystemPerformanceData,typeID=9000,timeStamp=2023-10-07T03:59:19.258698+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-06 23:59:19,259:DataUtilTest:INFO:SystemPerformanceData back to JSON: {
+    "timeStamp": "2023-10-07T03:59:19.258698+00:00",
+    "hasError": false,
+    "name": "Foobar2 SystemPerformanceData",
+    "typeID": 9000,
+    "statusCode": 0,
+    "latitude": 0.0,
+    "longitude": 0.0,
+    "elevation": 0.0,
+    "locationID": "constraineddevice001",
+    "cpuUtil": 0.0,
+    "memUtil": 0.0,
+    "diskUtil": 0.0
+}
+----------------------------------------------------------------------
+Ran 6 tests in 0.010s
+
+OK
+
+```
+</details>
+
+<br>
 
 
 ## Integration Tests Executed
