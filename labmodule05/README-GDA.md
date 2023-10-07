@@ -10,10 +10,10 @@ This module focuses on eastablishing a common data format between the CDA and GD
 
 ### How does your implementation work?
 
-When the GDA is initialized, 
+When the GDA is initialized, it establishes a suite of data container classes, such as <b>ActuatorData</b>, <b>SensorData</b>, and <b>SystemPerformanceData</b>, mirroring the ones used by CDAs. These container classes ensure uniformity in representing IoT data, simplifying the handling and administration of data across the ecosystem. Additionally, the GDA employs a <b>DataUtil</b> class to facilitate the conversion of data instances into <b>JSON</b> format for transmission and vice versa. This data translation is particularly crucial due to potential language and protocol disparities among various IoT components. The DataUtil class serves as a vital bridge, ensuring seamless translation to and from a standardized JSON format, promoting interoperability. Subsequently, the GDA proficiently manages the received data, encompassing functions like analytics, historical data storage, and transmission to cloud-based services for further processing. This data management encompasses various tasks, including filtering, aggregation, and decision-making based on the incoming data stream.
 
 ## Code Repository and Branch
-Please click the link before to be directed to the GDA repository.
+Please click the link before to be directed to the <b>GDA</b> repository.
 
 URL: https://github.com/Darren-C26/piot-java-components/tree/labmodule05
 
