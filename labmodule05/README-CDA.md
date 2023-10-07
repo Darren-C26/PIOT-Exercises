@@ -29,7 +29,7 @@ URL: https://github.com/Darren-C26/piot-python-components/tree/labmodule05
 
 ![CDA Implementation UML (Module05)](image-1.png)</p>
 
-<p align="center">CDA Implementation UML (Module03)</p>
+<p align="center">CDA Implementation UML (Module05)</p>
 
 ## Unit Tests Executed
 The unit tests executed for the <b>CDA</b> are listed below. Sample test executions can be seen by clicking on the dropdown icon.
