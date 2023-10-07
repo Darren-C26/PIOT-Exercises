@@ -313,12 +313,17 @@ OK (skipped=1)
 ```
 
 </details>
+
 <br>
 
 
 <b>New Tests Executed:</b>
+
+<br>
+
 <details close>
 <summary>DataUtilTest</summary>
+
 ```
 Finding files... done.
 Importing test modules ... done.
@@ -570,6 +575,8 @@ OK
 The integration tests for the <b>CDA</b> are listed below. Sample test executions can be seen by clicking on the dropdown icon.
 
 <b>Tests from Previous Modules (Re-run):</b>
+
+
 <details close>
 <summary>ConstrainedDeviceAppTest</summary>
 
