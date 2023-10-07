@@ -20,7 +20,7 @@ Similary, the CDA also contains simulated actuators - these are the instances of
  Logs are used in the application to indicate the intialization, starting, and stopping of the CDA, as well as activities performed by the APScheduler.
 
 ## Code Repository and Branch
-Please click the link before to be directed to the CDA repository.
+Please click the link before to be directed to the <b>CDA</b> repository.
 
 URL: https://github.com/Darren-C26/piot-python-components/tree/labmodule05
 
