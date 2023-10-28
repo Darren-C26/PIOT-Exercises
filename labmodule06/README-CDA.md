@@ -39,15 +39,13 @@ The unit tests executed for the <b>CDA</b> are listed below. Sample test executi
 <summary>ConfigUtilTest</summary>
 
 ```
-Finding files... done.
-Importing test modules ... done.
-
-2023-09-29 20:38:04,288:ConfigUtilTest:INFO:Testing ConfigUtil class...
-2023-09-29 20:38:04,288:ConfigUtil:INFO:Loading config: ./ValidTestConfig.props
-2023-09-29 20:38:04,298:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-09-29 20:38:04,298:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x0000020C2DB0D4E0>
+2023-10-27 23:42:45,112:ConfigUtilTest:INFO:Testing ConfigUtil class...
+2023-10-27 23:42:45,112:ConfigUtil:INFO:Loading config: ./ValidTestConfig.props
+2023-10-27 23:42:45,124:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-10-27 23:42:45,124:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000002432812D210>
+.s......
 ----------------------------------------------------------------------
-Ran 8 tests in 0.011s
+Ran 8 tests in 0.013s
 
 OK (skipped=1)
 ```
@@ -59,11 +57,9 @@ OK (skipped=1)
 <summary>SystemCpuUtilTaskTest</summary>
 
 ```
-Finding files... done.
-Importing test modules ... done.
-
-2023-09-29 20:38:43,642:SystemCpuUtilTaskTest:INFO:Testing SystemCpuUtilTask class...
-2023-09-29 20:38:43,643:SystemCpuUtilTaskTest:INFO:CPU utilization: 0.0
+2023-10-27 23:43:43,951:SystemCpuUtilTaskTest:INFO:Testing SystemCpuUtilTask class...
+2023-10-27 23:43:43,952:SystemCpuUtilTaskTest:INFO:CPU utilization: 0.0
+.
 ----------------------------------------------------------------------
 Ran 1 test in 0.001s
 
@@ -76,13 +72,11 @@ OK
 <summary>SystemMemUtilTaskTest</summary>
 
 ```
-Finding files... done.
-Importing test modules ... done.
-
-2023-09-29 20:39:04,009:SystemMemUtilTaskTest:INFO:Testing SystemMemUtilTask class...
-2023-09-29 20:39:04,014:SystemMemUtilTaskTest:INFO:Virtual memory utilization: 88.8
+2023-10-27 23:44:10,953:SystemMemUtilTaskTest:INFO:Testing SystemMemUtilTask class...
+2023-10-27 23:44:10,961:SystemMemUtilTaskTest:INFO:Virtual memory utilization: 89.2
+.
 ----------------------------------------------------------------------
-Ran 1 test in 0.006s
+Ran 1 test in 0.008s
 
 OK
 ```
@@ -94,18 +88,18 @@ OK
 <summary>ActuatorDataTest</summary>
 
 ```
-Finding files... done.
-Importing test modules ... done.
-
-2023-09-29 20:36:10,691:ActuatorDataTest:INFO:Testing ActuatorData class...
-2023-09-29 20:36:10,691:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-09-29 20:36:10,692:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-09-29 20:36:10,692:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001D436342140>
-2023-09-29 20:36:10,693:ActuatorDataTest:INFO:Actuator data as string: name=Not Set,typeID=0,timeStamp=2023-09-30T00:36:10.691572+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 20:36:10,693:ActuatorDataTest:INFO:Actuator data as string: name=ActuatorDataFooBar,typeID=0,timeStamp=2023-09-30T00:36:10.693571+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 20:36:10,694:ActuatorDataTest:INFO:Actuator data as string: name=ActuatorDataFooBar,typeID=0,timeStamp=2023-09-30T00:36:10.694571+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:44:53,652:ActuatorDataTest:INFO:Testing ActuatorData class...
+2023-10-27 23:44:53,652:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-10-27 23:44:53,653:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-10-27 23:44:53,653:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x00000235D2EEB4C0>
+C:\Users\Owner\Documents\Fall 2023\IoT Design and Analysis\programmingtheiot\python-components\src\test\python\programmingtheiot\part02\unit\data\ActuatorDataTest.py:44: DeprecationWarning: Please use assertEqual instead.
+  self.assertEquals(ad.getCommand(), ConfigConst.DEFAULT_COMMAND)
+2023-10-27 23:44:53,655:ActuatorDataTest:INFO:Actuator data as string: name=Not Set,typeID=0,timeStamp=2023-10-28T03:44:53.652161+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+.2023-10-27 23:44:53,655:ActuatorDataTest:INFO:Actuator data as string: name=ActuatorDataFooBar,typeID=0,timeStamp=2023-10-28T03:44:53.655289+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+.2023-10-27 23:44:53,656:ActuatorDataTest:INFO:Actuator data as string: name=ActuatorDataFooBar,typeID=0,timeStamp=2023-10-28T03:44:53.656162+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+.
 ----------------------------------------------------------------------
-Ran 3 tests in 0.003s
+Ran 3 tests in 0.004s
 
 OK
 ```
@@ -117,18 +111,18 @@ OK
 <summary>SensorDataTest</summary>
 
 ```
-Finding files... done.
-Importing test modules ... done.
-
-2023-09-29 20:35:35,485:SensorDataTest:INFO:Testing SensorData class...
-2023-09-29 20:35:35,485:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-09-29 20:35:35,488:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-09-29 20:35:35,488:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001BE4B4A2140>
-2023-09-29 20:35:35,489:SensorDataTest:INFO:Sensor data as string: name=Not Set,typeID=0,timeStamp=2023-09-30T00:35:35.485571+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 20:35:35,489:SensorDataTest:INFO:Sensor data as string: name=SensorDataFooBar,typeID=0,timeStamp=2023-09-30T00:35:35.489570+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 20:35:35,490:SensorDataTest:INFO:Sensor data as string: name=SensorDataFooBar,typeID=0,timeStamp=2023-09-30T00:35:35.490565+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:45:12,751:SensorDataTest:INFO:Testing SensorData class...
+2023-10-27 23:45:12,751:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-10-27 23:45:12,752:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-10-27 23:45:12,752:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001860986F5E0>
+C:\Users\Owner\Documents\Fall 2023\IoT Design and Analysis\programmingtheiot\python-components\src\test\python\programmingtheiot\part02\unit\data\SensorDataTest.py:46: DeprecationWarning: Please use assertEqual instead.
+  self.assertEquals(sd.getName(), ConfigConst.NOT_SET)
+2023-10-27 23:45:12,752:SensorDataTest:INFO:Sensor data as string: name=Not Set,typeID=0,timeStamp=2023-10-28T03:45:12.751560+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+.2023-10-27 23:45:12,753:SensorDataTest:INFO:Sensor data as string: name=SensorDataFooBar,typeID=0,timeStamp=2023-10-28T03:45:12.753561+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+.2023-10-27 23:45:12,753:SensorDataTest:INFO:Sensor data as string: name=SensorDataFooBar,typeID=0,timeStamp=2023-10-28T03:45:12.753561+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+.
 ----------------------------------------------------------------------
-Ran 3 tests in 0.005s
+Ran 3 tests in 0.002s
 
 OK
 ```
@@ -140,16 +134,16 @@ OK
 <summary>SystemPerformanceDataTest</summary>
 
 ```
-Finding files... done.
-Importing test modules ... done.
-
-2023-09-29 20:34:02,542:SystemPerformanceDataTest:INFO:Testing SystemPerformanceData class...
-2023-09-29 20:34:02,542:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-09-29 20:34:02,543:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-09-29 20:34:02,544:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001C2BAC120B0>
-2023-09-29 20:34:02,544:SystemPerformanceDataTest:INFO:System perf data as string: name=SystemPerfMsg,typeID=9000,timeStamp=2023-09-30T00:34:02.542946+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 20:34:02,544:SystemPerformanceDataTest:INFO:System perf data as string: name=SystemPerformanceDataFooBar,typeID=9000,timeStamp=2023-09-30T00:34:02.544948+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 20:34:02,544:SystemPerformanceDataTest:INFO:System perf data as string: name=SystemPerformanceDataFooBar,typeID=9000,timeStamp=2023-09-30T00:34:02.544948+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:45:31,700:SystemPerformanceDataTest:INFO:Testing SystemPerformanceData class...
+2023-10-27 23:45:31,700:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-10-27 23:45:31,701:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-10-27 23:45:31,702:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001674068B6D0>
+C:\Users\Owner\Documents\Fall 2023\IoT Design and Analysis\programmingtheiot\python-components\src\test\python\programmingtheiot\part02\unit\data\SystemPerformanceDataTest.py:45: DeprecationWarning: Please use assertEqual instead.
+  self.assertEquals(spd.getName(), ConfigConst.SYSTEM_PERF_NAME)
+2023-10-27 23:45:31,702:SystemPerformanceDataTest:INFO:System perf data as string: name=SystemPerfMsg,typeID=9000,timeStamp=2023-10-28T03:45:31.700978+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+.2023-10-27 23:45:31,703:SystemPerformanceDataTest:INFO:System perf data as string: name=SystemPerformanceDataFooBar,typeID=9000,timeStamp=2023-10-28T03:45:31.703975+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+.2023-10-27 23:45:31,703:SystemPerformanceDataTest:INFO:System perf data as string: name=SystemPerformanceDataFooBar,typeID=9000,timeStamp=2023-10-28T03:45:31.703975+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+.
 ----------------------------------------------------------------------
 Ran 3 tests in 0.003s
 
@@ -163,19 +157,18 @@ OK
 <summary>HumiditySensorSimTaskTest</summary>
 
 ```
-Finding files... done.
-Importing test modules ... done.
-2023-09-29 20:10:22,706:HumiditySensorSimTaskTest:INFO:Testing HumiditySensorSimTask class...
-
-2023-09-29 20:10:22,706:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-09-29 20:10:22,707:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-09-29 20:10:22,707:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001B36FCD3BB0>
-2023-09-29 20:10:22,707:HumiditySensorSimTaskTest:INFO:SensorData: name=HumiditySensor,typeID=1010,timeStamp=2023-09-30T00:10:22.707745+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 20:10:22,707:HumiditySensorSimTaskTest:INFO:Humidity data: 38.994777
+2023-10-27 23:46:00,943:HumiditySensorSimTaskTest:INFO:Testing HumiditySensorSimTask class...
+2023-10-27 23:46:00,943:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-10-27 23:46:00,944:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-10-27 23:46:00,944:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001B9015DCF70>
+2023-10-27 23:46:00,945:HumiditySensorSimTaskTest:INFO:SensorData: name=HumiditySensor,typeID=1010,timeStamp=2023-10-28T03:46:00.945638+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+.2023-10-27 23:46:00,945:HumiditySensorSimTaskTest:INFO:Humidity data: 38.752455
+.
 ----------------------------------------------------------------------
 Ran 2 tests in 0.002s
 
 OK
+
 ```
 
 </details>
@@ -185,17 +178,15 @@ OK
 <summary>PressureSensorSimTaskTest</summary>
 
 ```
-Finding files... done.
-Importing test modules ... done.
-2023-09-29 20:09:47,160:PressureSensorSimTaskTest:INFO:Testing PressureSensorSimTask class...
-
-2023-09-29 20:09:47,160:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-09-29 20:09:47,161:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-09-29 20:09:47,161:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000002B004CAFC40>
-2023-09-29 20:09:47,162:PressureSensorSimTaskTest:INFO:SensorData: name=PressureSensor,typeID=1012,timeStamp=2023-09-30T00:09:47.162459+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 20:09:47,162:PressureSensorSimTaskTest:INFO:Pressure data: 997.974112
+2023-10-27 23:46:21,972:PressureSensorSimTaskTest:INFO:Testing PressureSensorSimTask class...
+2023-10-27 23:46:21,973:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-10-27 23:46:21,973:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-10-27 23:46:21,973:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000002C322F60DF0>
+2023-10-27 23:46:21,974:PressureSensorSimTaskTest:INFO:SensorData: name=PressureSensor,typeID=1012,timeStamp=2023-10-28T03:46:21.974022+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+.2023-10-27 23:46:21,974:PressureSensorSimTaskTest:INFO:Pressure data: 1001.196179
+.
 ----------------------------------------------------------------------
-Ran 2 tests in 0.003s
+Ran 2 tests in 0.002s
 
 OK
 ```
@@ -207,17 +198,15 @@ OK
 <summary>TemperatureSensorSimTaskTest</summary>
 
 ```
-Finding files... done.
-Importing test modules ... done.
-2023-09-29 20:08:26,895:TemperatureSensorSimTaskTest:INFO:Testing TemperatureSensorSimTask class...
-
-2023-09-29 20:08:26,896:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-09-29 20:08:26,897:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-09-29 20:08:26,897:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000002824DD4FBB0>
-2023-09-29 20:08:26,897:TemperatureSensorSimTaskTest:INFO:Temperature SensorData: name=TempSensor,typeID=1013,timeStamp=2023-09-30T00:08:26.897828+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 20:08:26,898:TemperatureSensorSimTaskTest:INFO:Temperature data: 18.009321
+2023-10-27 23:46:53,783:TemperatureSensorSimTaskTest:INFO:Testing TemperatureSensorSimTask class...
+2023-10-27 23:46:53,785:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-10-27 23:46:53,785:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-10-27 23:46:53,785:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x00000236CD66CF10>
+2023-10-27 23:46:53,785:TemperatureSensorSimTaskTest:INFO:Temperature SensorData: name=TempSensor,typeID=1013,timeStamp=2023-10-28T03:46:53.785888+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+.2023-10-27 23:46:53,785:TemperatureSensorSimTaskTest:INFO:Temperature data: 18.958065
+.
 ----------------------------------------------------------------------
-Ran 2 tests in 0.003s
+Ran 2 tests in 0.002s
 
 OK
 ```
@@ -229,40 +218,40 @@ OK
 <summary>HumidifierActuatorSimTaskTest</summary>
 
 ```
-Finding files... done.
-Importing test modules ... done.
-
-2023-09-29 20:06:20,122:HumidifierActuatorSimTaskTest:INFO:Testing HumidifierActuatorSimTask class...
-2023-09-29 20:06:20,122:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-09-29 20:06:20,123:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-09-29 20:06:20,123:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001159A2D22F0>
-2023-09-29 20:06:20,123:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 1 18.2
-2023-09-29 20:06:20,123:BaseActuatorSimTask:INFO:Activating actuator...
-2023-09-29 20:06:20,123:BaseActuatorSimTask:INFO:Simulating HumidifierActuator actuator ON: 
+2023-10-27 23:47:13,458:HumidifierActuatorSimTaskTest:INFO:Testing HumidifierActuatorSimTask class...
+2023-10-27 23:47:13,458:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-10-27 23:47:13,459:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-10-27 23:47:13,459:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x0000017F99918DF0>
+2023-10-27 23:47:13,459:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 1 18.2
+2023-10-27 23:47:13,459:BaseActuatorSimTask:INFO:Activating actuator...
+2023-10-27 23:47:13,459:BaseActuatorSimTask:INFO:Simulating HumidifierActuator actuator ON: 
 *******
 * O N *
 *******
 HumidifierActuator VALUE -> 18.2
 =======
-2023-09-29 20:06:20,123:HumidifierActuatorSimTaskTest:INFO:ActuatorData: name=Not Set,typeID=1002,timeStamp=2023-09-30T00:06:20.123912+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 20:06:20,123:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 1 21.4
-2023-09-29 20:06:20,123:BaseActuatorSimTask:INFO:Activating actuator...
-2023-09-29 20:06:20,123:BaseActuatorSimTask:INFO:Simulating HumidifierActuator actuator ON: 
+C:\Users\Owner\Documents\Fall 2023\IoT Design and Analysis\programmingtheiot\python-components\src\test\python\programmingtheiot\part02\unit\sim\HumidifierActuatorSimTaskTest.py:49: DeprecationWarning: Please use assertEqual instead.
+  self.assertEquals(adr.getValue(), self.DEFAULT_VAL_A)
+2023-10-27 23:47:13,460:HumidifierActuatorSimTaskTest:INFO:ActuatorData: name=Not Set,typeID=1002,timeStamp=2023-10-28T03:47:13.459501+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:47:13,461:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 1 21.4
+2023-10-27 23:47:13,461:BaseActuatorSimTask:INFO:Activating actuator...
+2023-10-27 23:47:13,461:BaseActuatorSimTask:INFO:Simulating HumidifierActuator actuator ON: 
 *******
 * O N *
 *******
 HumidifierActuator VALUE -> 21.4
 =======
-2023-09-29 20:06:20,123:HumidifierActuatorSimTaskTest:INFO:ActuatorData: name=Not Set,typeID=1002,timeStamp=2023-09-30T00:06:20.123912+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 20:06:20,123:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 0 21.4
-2023-09-29 20:06:20,124:BaseActuatorSimTask:INFO:Deactivating actuator...
-2023-09-29 20:06:20,124:BaseActuatorSimTask:INFO:Simulating HumidifierActuator actuator OFF: 
+2023-10-27 23:47:13,461:HumidifierActuatorSimTaskTest:INFO:ActuatorData: name=Not Set,typeID=1002,timeStamp=2023-10-28T03:47:13.461501+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:47:13,461:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 0 21.4
+2023-10-27 23:47:13,461:BaseActuatorSimTask:INFO:Deactivating actuator...
+2023-10-27 23:47:13,461:BaseActuatorSimTask:INFO:Simulating HumidifierActuator actuator OFF: 
 *******
 * OFF *
 *******
-2023-09-29 20:06:20,124:HumidifierActuatorSimTaskTest:INFO:ActuatorData: name=Not Set,typeID=1002,timeStamp=2023-09-30T00:06:20.124884+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:47:13,461:HumidifierActuatorSimTaskTest:INFO:ActuatorData: name=Not Set,typeID=1002,timeStamp=2023-10-28T03:47:13.461501+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+.s
 ----------------------------------------------------------------------
-Ran 2 tests in 0.003s
+Ran 2 tests in 0.004s
 
 OK (skipped=1)
 ```
@@ -274,40 +263,40 @@ OK (skipped=1)
 <summary>HvacActuatorSimTaskTest</summary>
 
 ```
-Finding files... done.
-Importing test modules ... done.
-
-2023-09-29 20:02:48,792:HvacActuatorSimTaskTest:INFO:Testing HvacActuatorSimTask class...
-2023-09-29 20:02:48,793:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-09-29 20:02:48,794:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-09-29 20:02:48,794:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001A21E8522F0>
-2023-09-29 20:02:48,794:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 1 18.2
-2023-09-29 20:02:48,795:BaseActuatorSimTask:INFO:Activating actuator...
-2023-09-29 20:02:48,795:BaseActuatorSimTask:INFO:Simulating HvacActuator actuator ON: 
+2023-10-27 23:47:41,688:HvacActuatorSimTaskTest:INFO:Testing HvacActuatorSimTask class...
+2023-10-27 23:47:41,689:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-10-27 23:47:41,690:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-10-27 23:47:41,690:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001D5971A6D10>
+2023-10-27 23:47:41,690:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 1 18.2
+2023-10-27 23:47:41,690:BaseActuatorSimTask:INFO:Activating actuator...
+2023-10-27 23:47:41,690:BaseActuatorSimTask:INFO:Simulating HvacActuator actuator ON: 
 *******
 * O N *
 *******
 HvacActuator VALUE -> 18.2
 =======
-2023-09-29 20:02:48,795:HvacActuatorSimTaskTest:INFO:ActuatorData: name=Not Set,typeID=1001,timeStamp=2023-09-30T00:02:48.795134+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 20:02:48,795:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 1 21.4
-2023-09-29 20:02:48,796:BaseActuatorSimTask:INFO:Activating actuator...
-2023-09-29 20:02:48,796:BaseActuatorSimTask:INFO:Simulating HvacActuator actuator ON: 
+C:\Users\Owner\Documents\Fall 2023\IoT Design and Analysis\programmingtheiot\python-components\src\test\python\programmingtheiot\part02\unit\sim\HvacActuatorSimTaskTest.py:49: DeprecationWarning: Please use assertEqual instead.
+  self.assertEquals(adr.getValue(), self.DEFAULT_VAL_A)
+2023-10-27 23:47:41,692:HvacActuatorSimTaskTest:INFO:ActuatorData: name=Not Set,typeID=1001,timeStamp=2023-10-28T03:47:41.690701+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:47:41,692:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 1 21.4
+2023-10-27 23:47:41,692:BaseActuatorSimTask:INFO:Activating actuator...
+2023-10-27 23:47:41,692:BaseActuatorSimTask:INFO:Simulating HvacActuator actuator ON: 
 *******
 * O N *
 *******
 HvacActuator VALUE -> 21.4
 =======
-2023-09-29 20:02:48,796:HvacActuatorSimTaskTest:INFO:ActuatorData: name=Not Set,typeID=1001,timeStamp=2023-09-30T00:02:48.796141+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 20:02:48,796:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 0 21.4
-2023-09-29 20:02:48,796:BaseActuatorSimTask:INFO:Deactivating actuator...
-2023-09-29 20:02:48,796:BaseActuatorSimTask:INFO:Simulating HvacActuator actuator OFF: 
+2023-10-27 23:47:41,692:HvacActuatorSimTaskTest:INFO:ActuatorData: name=Not Set,typeID=1001,timeStamp=2023-10-28T03:47:41.692048+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:47:41,692:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 0 21.4
+2023-10-27 23:47:41,692:BaseActuatorSimTask:INFO:Deactivating actuator...
+2023-10-27 23:47:41,692:BaseActuatorSimTask:INFO:Simulating HvacActuator actuator OFF: 
 *******
 * OFF *
 *******
-2023-09-29 20:02:48,796:HvacActuatorSimTaskTest:INFO:ActuatorData: name=Not Set,typeID=1001,timeStamp=2023-09-30T00:02:48.796141+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:47:41,692:HvacActuatorSimTaskTest:INFO:ActuatorData: name=Not Set,typeID=1001,timeStamp=2023-10-28T03:47:41.692554+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+.s
 ----------------------------------------------------------------------
-Ran 2 tests in 0.004s
+Ran 2 tests in 0.003s
 
 OK (skipped=1)
 ```
@@ -320,24 +309,21 @@ OK (skipped=1)
 <summary>DataUtilTest</summary>
 
 ```
-Finding files... done.
-Importing test modules ... done.
-
-2023-10-06 23:59:19,249:DataUtilTest:INFO:Testing DataUtil class...
-2023-10-06 23:59:19,249:DataUtil:INFO:Created DataUtil instance.
-2023-10-06 23:59:19,249:DataUtilTest:INFO:================================================
-2023-10-06 23:59:19,250:DataUtilTest:INFO:DataUtil test execution...
-2023-10-06 23:59:19,250:DataUtilTest:INFO:================================================
-2023-10-06 23:59:19,250:DataUtilTest:INFO:
+2023-10-27 23:48:07,871:DataUtilTest:INFO:Testing DataUtil class...
+2023-10-27 23:48:07,871:DataUtil:INFO:Created DataUtil instance.
+2023-10-27 23:48:07,872:DataUtilTest:INFO:================================================
+2023-10-27 23:48:07,872:DataUtilTest:INFO:DataUtil test execution...
+2023-10-27 23:48:07,872:DataUtilTest:INFO:================================================
+2023-10-27 23:48:07,872:DataUtilTest:INFO:
 
 ----- [ActuatorData Conversions from JSON] -----
-2023-10-06 23:59:19,250:DataUtil:WARNING:JSON data is empty or null. Returning null.
-2023-10-06 23:59:19,250:DataUtil:WARNING:JSON data is empty or null. Returning null.
-2023-10-06 23:59:19,250:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-10-06 23:59:19,251:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-10-06 23:59:19,251:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x00000157C3841CC0>
-2023-10-06 23:59:19,252:DataUtilTest:INFO:Sample JSON: {
-    "timeStamp": "2023-10-07T03:59:19.250697+00:00",
+2023-10-27 23:48:07,872:DataUtil:WARNING:JSON data is empty or null. Returning null.
+2023-10-27 23:48:07,872:DataUtil:WARNING:JSON data is empty or null. Returning null.
+2023-10-27 23:48:07,872:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-10-27 23:48:07,872:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-10-27 23:48:07,872:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001D74FBB8F40>
+2023-10-27 23:48:07,872:DataUtilTest:INFO:Sample JSON: {
+    "timeStamp": "2023-10-28T03:48:07.872040+00:00",
     "hasError": false,
     "name": "FooBar ActuatorData",
     "typeID": 0,
@@ -351,9 +337,9 @@ Importing test modules ... done.
     "stateData": "",
     "isResponse": false
 }
-2023-10-06 23:59:19,252:DataUtilTest:INFO:JSON to ActuatorData: name=FooBar ActuatorData,typeID=0,timeStamp=2023-10-07T03:59:19.250697+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-10-06 23:59:19,252:DataUtilTest:INFO:ActuatorData back to JSON: {
-    "timeStamp": "2023-10-07T03:59:19.250697+00:00",
+2023-10-27 23:48:07,872:DataUtilTest:INFO:JSON to ActuatorData: name=FooBar ActuatorData,typeID=0,timeStamp=2023-10-28T03:48:07.872040+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:48:07,873:DataUtilTest:INFO:ActuatorData back to JSON: {
+    "timeStamp": "2023-10-28T03:48:07.872040+00:00",
     "hasError": false,
     "name": "FooBar ActuatorData",
     "typeID": 0,
@@ -367,15 +353,15 @@ Importing test modules ... done.
     "stateData": "",
     "isResponse": false
 }
-2023-10-06 23:59:19,252:DataUtilTest:INFO:================================================
-2023-10-06 23:59:19,253:DataUtilTest:INFO:DataUtil test execution...
-2023-10-06 23:59:19,253:DataUtilTest:INFO:================================================
-2023-10-06 23:59:19,253:DataUtilTest:INFO:
+.2023-10-27 23:48:07,873:DataUtilTest:INFO:================================================
+2023-10-27 23:48:07,873:DataUtilTest:INFO:DataUtil test execution...
+2023-10-27 23:48:07,873:DataUtilTest:INFO:================================================
+2023-10-27 23:48:07,873:DataUtilTest:INFO:
 
 ----- [JSON Conversions from ActuatorData] -----
-2023-10-06 23:59:19,254:DataUtilTest:INFO:Sample ActuatorData: name=FooBar2 Actuator,typeID=0,timeStamp=2023-10-07T03:59:19.253698+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-10-06 23:59:19,254:DataUtilTest:INFO:ActuatorData to JSON: {
-    "timeStamp": "2023-10-07T03:59:19.253698+00:00",
+2023-10-27 23:48:07,873:DataUtilTest:INFO:Sample ActuatorData: name=FooBar2 Actuator,typeID=0,timeStamp=2023-10-28T03:48:07.873613+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:48:07,873:DataUtilTest:INFO:ActuatorData to JSON: {
+    "timeStamp": "2023-10-28T03:48:07.873613+00:00",
     "hasError": false,
     "name": "FooBar2 Actuator",
     "typeID": 0,
@@ -389,9 +375,9 @@ Importing test modules ... done.
     "stateData": "",
     "isResponse": false
 }
-2023-10-06 23:59:19,254:DataUtilTest:INFO:JSON back to ActuatorData: name=FooBar2 Actuator,typeID=0,timeStamp=2023-10-07T03:59:19.253698+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-10-06 23:59:19,254:DataUtilTest:INFO:ActuatorData back to JSON: {
-    "timeStamp": "2023-10-07T03:59:19.253698+00:00",
+2023-10-27 23:48:07,873:DataUtilTest:INFO:JSON back to ActuatorData: name=FooBar2 Actuator,typeID=0,timeStamp=2023-10-28T03:48:07.873613+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:48:07,873:DataUtilTest:INFO:ActuatorData back to JSON: {
+    "timeStamp": "2023-10-28T03:48:07.873613+00:00",
     "hasError": false,
     "name": "FooBar2 Actuator",
     "typeID": 0,
@@ -405,16 +391,16 @@ Importing test modules ... done.
     "stateData": "",
     "isResponse": false
 }
-2023-10-06 23:59:19,254:DataUtilTest:INFO:================================================
-2023-10-06 23:59:19,254:DataUtilTest:INFO:DataUtil test execution...
-2023-10-06 23:59:19,254:DataUtilTest:INFO:================================================
-2023-10-06 23:59:19,254:DataUtilTest:INFO:
+.2023-10-27 23:48:07,873:DataUtilTest:INFO:================================================
+2023-10-27 23:48:07,873:DataUtilTest:INFO:DataUtil test execution...
+2023-10-27 23:48:07,873:DataUtilTest:INFO:================================================
+2023-10-27 23:48:07,873:DataUtilTest:INFO:
 
 ----- [SensorData Conversions from JSON] -----
-2023-10-06 23:59:19,254:DataUtil:WARNING:JSON data is empty or null. Returning null.
-2023-10-06 23:59:19,254:DataUtil:WARNING:JSON data is empty or null. Returning null.
-2023-10-06 23:59:19,255:DataUtilTest:INFO:Sample JSON: {
-    "timeStamp": "2023-10-07T03:59:19.255717+00:00",
+2023-10-27 23:48:07,873:DataUtil:WARNING:JSON data is empty or null. Returning null.
+2023-10-27 23:48:07,873:DataUtil:WARNING:JSON data is empty or null. Returning null.
+2023-10-27 23:48:07,874:DataUtilTest:INFO:Sample JSON: {
+    "timeStamp": "2023-10-28T03:48:07.873613+00:00",
     "hasError": false,
     "name": "FooBar SensorData",
     "typeID": 0,
@@ -428,9 +414,9 @@ Importing test modules ... done.
     "stateData": "",
     "isResponse": false
 }
-2023-10-06 23:59:19,255:DataUtilTest:INFO:JSON to SensorData: name=FooBar SensorData,typeID=0,timeStamp=2023-10-07T03:59:19.255717+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-10-06 23:59:19,255:DataUtilTest:INFO:SensorData back to JSON: {
-    "timeStamp": "2023-10-07T03:59:19.255717+00:00",
+2023-10-27 23:48:07,874:DataUtilTest:INFO:JSON to SensorData: name=FooBar SensorData,typeID=0,timeStamp=2023-10-28T03:48:07.873613+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:48:07,874:DataUtilTest:INFO:SensorData back to JSON: {
+    "timeStamp": "2023-10-28T03:48:07.873613+00:00",
     "hasError": false,
     "name": "FooBar SensorData",
     "typeID": 0,
@@ -444,15 +430,15 @@ Importing test modules ... done.
     "stateData": "",
     "isResponse": false
 }
-2023-10-06 23:59:19,255:DataUtilTest:INFO:================================================
-2023-10-06 23:59:19,256:DataUtilTest:INFO:DataUtil test execution...
-2023-10-06 23:59:19,256:DataUtilTest:INFO:================================================
-2023-10-06 23:59:19,256:DataUtilTest:INFO:
+.2023-10-27 23:48:07,874:DataUtilTest:INFO:================================================
+2023-10-27 23:48:07,874:DataUtilTest:INFO:DataUtil test execution...
+2023-10-27 23:48:07,874:DataUtilTest:INFO:================================================
+2023-10-27 23:48:07,874:DataUtilTest:INFO:
 
 ----- [JSON Conversions from SensorData] -----
-2023-10-06 23:59:19,256:DataUtilTest:INFO:Sample SensorData: name=Foobar2 Sensor,typeID=0,timeStamp=2023-10-07T03:59:19.256696+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-10-06 23:59:19,256:DataUtilTest:INFO:SensorData to JSON: {
-    "timeStamp": "2023-10-07T03:59:19.256696+00:00",
+2023-10-27 23:48:07,874:DataUtilTest:INFO:Sample SensorData: name=Foobar2 Sensor,typeID=0,timeStamp=2023-10-28T03:48:07.874613+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:48:07,874:DataUtilTest:INFO:SensorData to JSON: {
+    "timeStamp": "2023-10-28T03:48:07.874613+00:00",
     "hasError": false,
     "name": "Foobar2 Sensor",
     "typeID": 0,
@@ -466,9 +452,9 @@ Importing test modules ... done.
     "stateData": "",
     "isResponse": false
 }
-2023-10-06 23:59:19,256:DataUtilTest:INFO:JSON back to SensorData: name=Foobar2 Sensor,typeID=0,timeStamp=2023-10-07T03:59:19.256696+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-10-06 23:59:19,256:DataUtilTest:INFO:SensorData back to JSON: {
-    "timeStamp": "2023-10-07T03:59:19.256696+00:00",
+2023-10-27 23:48:07,874:DataUtilTest:INFO:JSON back to SensorData: name=Foobar2 Sensor,typeID=0,timeStamp=2023-10-28T03:48:07.874613+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:48:07,874:DataUtilTest:INFO:SensorData back to JSON: {
+    "timeStamp": "2023-10-28T03:48:07.874613+00:00",
     "hasError": false,
     "name": "Foobar2 Sensor",
     "typeID": 0,
@@ -482,16 +468,16 @@ Importing test modules ... done.
     "stateData": "",
     "isResponse": false
 }
-2023-10-06 23:59:19,256:DataUtilTest:INFO:================================================
-2023-10-06 23:59:19,257:DataUtilTest:INFO:DataUtil test execution...
-2023-10-06 23:59:19,257:DataUtilTest:INFO:================================================
-2023-10-06 23:59:19,257:DataUtilTest:INFO:
+.2023-10-27 23:48:07,874:DataUtilTest:INFO:================================================
+2023-10-27 23:48:07,874:DataUtilTest:INFO:DataUtil test execution...
+2023-10-27 23:48:07,874:DataUtilTest:INFO:================================================
+2023-10-27 23:48:07,874:DataUtilTest:INFO:
 
 ----- [SystemPerformanceData Conversions from JSON] -----
-2023-10-06 23:59:19,257:DataUtil:WARNING:JSON data is empty or null. Returning null.
-2023-10-06 23:59:19,257:DataUtil:WARNING:JSON data is empty or null. Returning null.
-2023-10-06 23:59:19,257:DataUtilTest:INFO:Sample JSON: {
-    "timeStamp": "2023-10-07T03:59:19.257696+00:00",
+2023-10-27 23:48:07,874:DataUtil:WARNING:JSON data is empty or null. Returning null.
+2023-10-27 23:48:07,874:DataUtil:WARNING:JSON data is empty or null. Returning null.
+2023-10-27 23:48:07,875:DataUtilTest:INFO:Sample JSON: {
+    "timeStamp": "2023-10-28T03:48:07.875613+00:00",
     "hasError": false,
     "name": "FooBar SystemPerformanceData",
     "typeID": 9000,
@@ -504,9 +490,9 @@ Importing test modules ... done.
     "memUtil": 0.0,
     "diskUtil": 0.0
 }
-2023-10-06 23:59:19,257:DataUtilTest:INFO:JSON to SystemPerformanceData: name=FooBar SystemPerformanceData,typeID=9000,timeStamp=2023-10-07T03:59:19.257696+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-10-06 23:59:19,257:DataUtilTest:INFO:SystemPerformanceData back to JSON: {
-    "timeStamp": "2023-10-07T03:59:19.257696+00:00",
+2023-10-27 23:48:07,875:DataUtilTest:INFO:JSON to SystemPerformanceData: name=FooBar SystemPerformanceData,typeID=9000,timeStamp=2023-10-28T03:48:07.875613+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:48:07,875:DataUtilTest:INFO:SystemPerformanceData back to JSON: {
+    "timeStamp": "2023-10-28T03:48:07.875613+00:00",
     "hasError": false,
     "name": "FooBar SystemPerformanceData",
     "typeID": 9000,
@@ -519,15 +505,15 @@ Importing test modules ... done.
     "memUtil": 0.0,
     "diskUtil": 0.0
 }
-2023-10-06 23:59:19,258:DataUtilTest:INFO:================================================
-2023-10-06 23:59:19,258:DataUtilTest:INFO:DataUtil test execution...
-2023-10-06 23:59:19,258:DataUtilTest:INFO:================================================
-2023-10-06 23:59:19,258:DataUtilTest:INFO:
+.2023-10-27 23:48:07,875:DataUtilTest:INFO:================================================
+2023-10-27 23:48:07,875:DataUtilTest:INFO:DataUtil test execution...
+2023-10-27 23:48:07,875:DataUtilTest:INFO:================================================
+2023-10-27 23:48:07,875:DataUtilTest:INFO:
 
 ----- [JSON Conversions from SystemPerformanceData] -----
-2023-10-06 23:59:19,259:DataUtilTest:INFO:Sample SystemPerformanceData: name=Foobar2 SystemPerformanceData,typeID=9000,timeStamp=2023-10-07T03:59:19.258698+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-10-06 23:59:19,259:DataUtilTest:INFO:SystemPerformanceData to JSON: {
-    "timeStamp": "2023-10-07T03:59:19.258698+00:00",
+2023-10-27 23:48:07,875:DataUtilTest:INFO:Sample SystemPerformanceData: name=Foobar2 SystemPerformanceData,typeID=9000,timeStamp=2023-10-28T03:48:07.875613+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:48:07,875:DataUtilTest:INFO:SystemPerformanceData to JSON: {
+    "timeStamp": "2023-10-28T03:48:07.875613+00:00",
     "hasError": false,
     "name": "Foobar2 SystemPerformanceData",
     "typeID": 9000,
@@ -540,9 +526,9 @@ Importing test modules ... done.
     "memUtil": 0.0,
     "diskUtil": 0.0
 }
-2023-10-06 23:59:19,259:DataUtilTest:INFO:JSON back to SystemPerformanceData: name=Foobar2 SystemPerformanceData,typeID=9000,timeStamp=2023-10-07T03:59:19.258698+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-10-06 23:59:19,259:DataUtilTest:INFO:SystemPerformanceData back to JSON: {
-    "timeStamp": "2023-10-07T03:59:19.258698+00:00",
+2023-10-27 23:48:07,875:DataUtilTest:INFO:JSON back to SystemPerformanceData: name=Foobar2 SystemPerformanceData,typeID=9000,timeStamp=2023-10-28T03:48:07.875613+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:48:07,875:DataUtilTest:INFO:SystemPerformanceData back to JSON: {
+    "timeStamp": "2023-10-28T03:48:07.875613+00:00",
     "hasError": false,
     "name": "Foobar2 SystemPerformanceData",
     "typeID": 9000,
@@ -555,11 +541,11 @@ Importing test modules ... done.
     "memUtil": 0.0,
     "diskUtil": 0.0
 }
+.
 ----------------------------------------------------------------------
-Ran 6 tests in 0.010s
+Ran 6 tests in 0.005s
 
 OK
-
 ```
 </details>
 
@@ -592,62 +578,62 @@ The integration tests for the <b>CDA</b> are listed below. Sample test execution
 <summary>ConstrainedDeviceAppTest</summary>
 
 ```
-Finding files... done.
-Importing test modules ... done.
-
-2023-09-29 20:44:54,858:root:INFO:Testing ConstrainedDeviceApp class...
-2023-09-29 20:44:54,858:root:INFO:Initializing CDA...
-2023-09-29 20:44:54,859:root:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-09-29 20:44:54,860:root:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-09-29 20:44:54,860:root:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001D381BFF1F0>
-2023-09-29 20:44:54,860:tzlocal:DEBUG:Looking up time zone info from registry
-2023-09-29 20:44:54,870:apscheduler.scheduler:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2023-09-29 20:44:54,870:root:INFO:Local system performance tracking enabled
-2023-09-29 20:44:54,870:apscheduler.scheduler:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2023-09-29 20:44:54,871:root:INFO:Current time set to: Fri Sep 29 20:44:54 2023
-2023-09-29 20:44:54,871:root:INFO:timeEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
-2023-09-29 20:44:54,871:root:DEBUG:Noise=10.000000; Noise Scale=0.100000; Mean Magnitude=1.000000
-2023-09-29 20:44:54,871:root:INFO:dataEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
-2023-09-29 20:44:54,871:root:INFO:Current time set to: Fri Sep 29 20:44:54 2023
-2023-09-29 20:44:54,871:root:INFO:timeEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
-2023-09-29 20:44:54,871:root:DEBUG:Noise=10.000000; Noise Scale=10.000000; Mean Magnitude=3.000000
-2023-09-29 20:44:54,872:root:INFO:dataEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
-2023-09-29 20:44:54,872:root:INFO:Current time set to: Fri Sep 29 20:44:54 2023
-2023-09-29 20:44:54,872:root:INFO:timeEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
-2023-09-29 20:44:54,872:root:DEBUG:Noise=10.000000; Noise Scale=0.100000; Mean Magnitude=1.000000
-2023-09-29 20:44:54,872:root:INFO:dataEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
-2023-09-29 20:44:54,873:root:INFO:Local sensor tracking enabled
-2023-09-29 20:44:54,873:root:INFO:Local actuation capabilities enabled
-2023-09-29 20:44:54,873:root:INFO:Starting CDA...
-2023-09-29 20:44:54,873:root:INFO:Starting DeviceDataManager...
-2023-09-29 20:44:54,873:root:INFO:Starting SystemPerformanceManager...
-2023-09-29 20:44:54,874:apscheduler.scheduler:INFO:Added job "SystemPerformanceManager.handleTelemetry" to job store "default"
-2023-09-29 20:44:54,874:apscheduler.scheduler:INFO:Scheduler started
-2023-09-29 20:44:54,875:apscheduler.scheduler:DEBUG:Looking for jobs to run
-2023-09-29 20:44:54,875:root:INFO:Started SystemPerformanceManager.
-2023-09-29 20:44:54,875:root:INFO:Started SensorAdapterManager.
-2023-09-29 20:44:54,875:apscheduler.scheduler:DEBUG:Next wakeup is due at 2023-09-29 20:44:59.870490-04:00 (in 4.995000 seconds)
-2023-09-29 20:44:54,875:apscheduler.scheduler:INFO:Added job "SensorAdapterManager.handleTelemetry" to job store "default"
-2023-09-29 20:44:54,875:apscheduler.scheduler:INFO:Scheduler started
-2023-09-29 20:44:54,876:apscheduler.scheduler:DEBUG:Looking for jobs to run
-2023-09-29 20:44:54,876:root:INFO:Started DeviceDataManager.
-2023-09-29 20:44:54,876:apscheduler.scheduler:DEBUG:Next wakeup is due at 2023-09-29 20:44:59.870490-04:00 (in 4.993979 seconds)
-2023-09-29 20:44:54,876:root:INFO:CDA started.
-2023-09-29 20:44:54,876:root:INFO:CDA stopping...
-2023-09-29 20:44:54,876:root:INFO:Stopping DeviceDataManager...
-2023-09-29 20:44:54,876:root:INFO:Stopping SystemPerformanceManager...
-2023-09-29 20:44:54,876:apscheduler.scheduler:INFO:Scheduler has been shut down
-2023-09-29 20:44:54,876:apscheduler.scheduler:DEBUG:Looking for jobs to run
-2023-09-29 20:44:54,876:apscheduler.scheduler:DEBUG:No jobs; waiting until a job is added
-2023-09-29 20:44:54,877:root:INFO:Stopped SystemPerformanceManager.
-2023-09-29 20:44:54,877:root:INFO:Stopped SensorAdapterManager.
-2023-09-29 20:44:54,877:apscheduler.scheduler:INFO:Scheduler has been shut down
-2023-09-29 20:44:54,877:apscheduler.scheduler:DEBUG:Looking for jobs to run
-2023-09-29 20:44:54,877:apscheduler.scheduler:DEBUG:No jobs; waiting until a job is added
-2023-09-29 20:44:54,877:root:INFO:Stopped DeviceDataManager.
-2023-09-29 20:44:54,877:root:INFO:CDA stopped with exit code 0.
+2023-10-27 23:48:54,135:root:INFO:Testing ConstrainedDeviceApp class...
+2023-10-27 23:48:54,136:root:INFO:Initializing CDA...
+2023-10-27 23:48:54,136:root:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-10-27 23:48:54,137:root:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-10-27 23:48:54,137:root:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x0000025DBDC27220>
+2023-10-27 23:48:54,137:tzlocal:DEBUG:Looking up time zone info from registry
+2023-10-27 23:48:54,152:apscheduler.scheduler:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-10-27 23:48:54,153:root:INFO:Local system performance tracking enabled
+2023-10-27 23:48:54,153:apscheduler.scheduler:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-10-27 23:48:54,154:root:INFO:Current time set to: Fri Oct 27 23:48:54 2023
+2023-10-27 23:48:54,154:root:INFO:timeEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
+2023-10-27 23:48:54,158:root:DEBUG:Noise=10.000000; Noise Scale=0.100000; Mean Magnitude=1.000000
+2023-10-27 23:48:54,158:root:INFO:dataEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
+2023-10-27 23:48:54,158:root:INFO:Current time set to: Fri Oct 27 23:48:54 2023
+2023-10-27 23:48:54,158:root:INFO:timeEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
+2023-10-27 23:48:54,159:root:DEBUG:Noise=10.000000; Noise Scale=10.000000; Mean Magnitude=3.000000
+2023-10-27 23:48:54,159:root:INFO:dataEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
+2023-10-27 23:48:54,159:root:INFO:Current time set to: Fri Oct 27 23:48:54 2023
+2023-10-27 23:48:54,159:root:INFO:timeEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
+2023-10-27 23:48:54,159:root:DEBUG:Noise=10.000000; Noise Scale=0.100000; Mean Magnitude=1.000000
+2023-10-27 23:48:54,159:root:INFO:dataEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
+2023-10-27 23:48:54,160:root:INFO:Local sensor tracking enabled
+2023-10-27 23:48:54,160:root:INFO:Local actuation capabilities enabled
+2023-10-27 23:48:54,160:root:INFO:Starting CDA...
+2023-10-27 23:48:54,160:root:INFO:Starting DeviceDataManager...
+2023-10-27 23:48:54,160:root:INFO:Starting SystemPerformanceManager...
+2023-10-27 23:48:54,163:apscheduler.scheduler:INFO:Added job "SystemPerformanceManager.handleTelemetry" to job store "default"
+2023-10-27 23:48:54,163:apscheduler.scheduler:INFO:Scheduler started
+2023-10-27 23:48:54,164:apscheduler.scheduler:DEBUG:Looking for jobs to run
+2023-10-27 23:48:54,165:root:INFO:Started SystemPerformanceManager.
+2023-10-27 23:48:54,165:apscheduler.scheduler:DEBUG:Next wakeup is due at 2023-10-27 23:48:59.152121-04:00 (in 4.986945 seconds)
+2023-10-27 23:48:54,165:root:INFO:Started SensorAdapterManager.
+2023-10-27 23:48:54,165:apscheduler.scheduler:INFO:Added job "SensorAdapterManager.handleTelemetry" to job store "default"
+2023-10-27 23:48:54,165:apscheduler.scheduler:INFO:Scheduler started
+2023-10-27 23:48:54,166:apscheduler.scheduler:DEBUG:Looking for jobs to run
+2023-10-27 23:48:54,166:root:INFO:Started DeviceDataManager.
+2023-10-27 23:48:54,166:apscheduler.scheduler:DEBUG:Next wakeup is due at 2023-10-27 23:48:59.153119-04:00 (in 4.986982 seconds)
+2023-10-27 23:48:54,166:root:INFO:CDA started.
+2023-10-27 23:48:54,166:root:INFO:CDA stopping...
+2023-10-27 23:48:54,167:root:INFO:Stopping DeviceDataManager...
+2023-10-27 23:48:54,167:root:INFO:Stopping SystemPerformanceManager...
+2023-10-27 23:48:54,167:apscheduler.scheduler:INFO:Scheduler has been shut down
+2023-10-27 23:48:54,167:apscheduler.scheduler:DEBUG:Looking for jobs to run
+2023-10-27 23:48:54,167:apscheduler.scheduler:DEBUG:No jobs; waiting until a job is added
+2023-10-27 23:48:54,167:root:INFO:Stopped SystemPerformanceManager.
+2023-10-27 23:48:54,167:root:INFO:Stopped SensorAdapterManager.
+2023-10-27 23:48:54,167:apscheduler.scheduler:INFO:Scheduler has been shut down
+2023-10-27 23:48:54,167:apscheduler.scheduler:DEBUG:Looking for jobs to run
+2023-10-27 23:48:54,167:apscheduler.scheduler:DEBUG:No jobs; waiting until a job is added
+2023-10-27 23:48:54,168:root:INFO:Stopped DeviceDataManager.
+2023-10-27 23:48:54,168:root:INFO:CDA stopped with exit code 0.
+.
 ----------------------------------------------------------------------
-Ran 1 test in 0.019s
+Ran 1 test in 0.032s
+
+OK
 ```
 
 </details>
@@ -696,73 +682,71 @@ OK
 <summary>SensorAdapterManagerTest</summary>
 
 ```
-Finding files... done.
-Importing test modules ... done.
-
-2023-09-29 19:56:03,781:SensorAdapterManagerTest:INFO:Testing SensorAdapterManager class...
-2023-09-29 19:56:03,781:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-09-29 19:56:03,800:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-09-29 19:56:03,800:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001D535DE6D40>
-2023-09-29 19:56:03,801:win32:DEBUG:Looking up time zone info from registry
-2023-09-29 19:56:03,811:base:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
-2023-09-29 19:56:03,811:SensorDataGenerator:INFO:Current time set to: Fri Sep 29 19:56:03 2023
-2023-09-29 19:56:03,812:SensorDataGenerator:INFO:timeEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
-2023-09-29 19:56:03,812:SensorDataGenerator:DEBUG:Noise=10.000000; Noise Scale=0.100000; Mean Magnitude=1.000000
-2023-09-29 19:56:03,812:SensorDataGenerator:INFO:dataEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
-2023-09-29 19:56:03,812:SensorDataGenerator:INFO:Current time set to: Fri Sep 29 19:56:03 2023
-2023-09-29 19:56:03,812:SensorDataGenerator:INFO:timeEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
-2023-09-29 19:56:03,812:SensorDataGenerator:DEBUG:Noise=10.000000; Noise Scale=10.000000; Mean Magnitude=3.000000
-2023-09-29 19:56:03,813:SensorDataGenerator:INFO:dataEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
-2023-09-29 19:56:03,813:SensorDataGenerator:INFO:Current time set to: Fri Sep 29 19:56:03 2023
-2023-09-29 19:56:03,813:SensorDataGenerator:INFO:timeEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
-2023-09-29 19:56:03,813:SensorDataGenerator:DEBUG:Noise=10.000000; Noise Scale=0.100000; Mean Magnitude=1.000000
-2023-09-29 19:56:03,813:SensorDataGenerator:INFO:dataEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
-2023-09-29 19:56:03,813:SensorAdapterManager:INFO:Started SensorAdapterManager.
-2023-09-29 19:56:03,815:base:INFO:Added job "SensorAdapterManager.handleTelemetry" to job store "default"
-2023-09-29 19:56:03,815:base:INFO:Scheduler started
-2023-09-29 19:56:03,816:base:DEBUG:Looking for jobs to run
-2023-09-29 19:56:03,816:base:DEBUG:Next wakeup is due at 2023-09-29 19:56:08.811183-04:00 (in 4.994996 seconds)
-2023-09-29 19:56:08,816:base:DEBUG:Looking for jobs to run
-2023-09-29 19:56:08,818:base:INFO:Running job "SensorAdapterManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-09-29 19:56:08 EDT)" (scheduled at 2023-09-29 19:56:08.811183-04:00)
-2023-09-29 19:56:08,819:SensorAdapterManager:DEBUG:Generated humidity data: name=HumiditySensor,typeID=1010,timeStamp=2023-09-29T23:56:08.818528+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:56:08,819:base:DEBUG:Next wakeup is due at 2023-09-29 19:56:13.811183-04:00 (in 4.991466 seconds)
-2023-09-29 19:56:08,820:SensorAdapterManager:DEBUG:Generated pressure data: name=PressureSensor,typeID=1012,timeStamp=2023-09-29T23:56:08.818528+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:56:08,820:SensorAdapterManager:DEBUG:Generated temp data: name=TempSensor,typeID=1013,timeStamp=2023-09-29T23:56:08.818528+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:56:08,821:DefaultDataMessageListener:INFO:Sensor Message: name=HumiditySensor,typeID=1010,timeStamp=2023-09-29T23:56:08.818528+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:56:08,821:DefaultDataMessageListener:INFO:Sensor Message: name=PressureSensor,typeID=1012,timeStamp=2023-09-29T23:56:08.818528+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:56:08,821:DefaultDataMessageListener:INFO:Sensor Message: name=TempSensor,typeID=1013,timeStamp=2023-09-29T23:56:08.818528+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:56:08,821:base:INFO:Job "SensorAdapterManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-09-29 19:56:13 EDT)" executed successfully
+2023-10-27 23:50:04,059:SensorAdapterManagerTest:INFO:Testing SensorAdapterManager class...
+2023-10-27 23:50:04,059:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-10-27 23:50:04,076:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-10-27 23:50:04,076:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x0000014FE6963370>
+2023-10-27 23:50:04,077:win32:DEBUG:Looking up time zone info from registry
+2023-10-27 23:50:04,087:base:INFO:Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2023-10-27 23:50:04,088:SensorDataGenerator:INFO:Current time set to: Fri Oct 27 23:50:04 2023
+2023-10-27 23:50:04,088:SensorDataGenerator:INFO:timeEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
+2023-10-27 23:50:04,089:SensorDataGenerator:DEBUG:Noise=10.000000; Noise Scale=0.100000; Mean Magnitude=1.000000
+2023-10-27 23:50:04,089:SensorDataGenerator:INFO:dataEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
+2023-10-27 23:50:04,089:SensorDataGenerator:INFO:Current time set to: Fri Oct 27 23:50:04 2023
+2023-10-27 23:50:04,089:SensorDataGenerator:INFO:timeEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
+2023-10-27 23:50:04,089:SensorDataGenerator:DEBUG:Noise=10.000000; Noise Scale=10.000000; Mean Magnitude=3.000000
+2023-10-27 23:50:04,089:SensorDataGenerator:INFO:dataEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
+2023-10-27 23:50:04,089:SensorDataGenerator:INFO:Current time set to: Fri Oct 27 23:50:04 2023
+2023-10-27 23:50:04,089:SensorDataGenerator:INFO:timeEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
+2023-10-27 23:50:04,089:SensorDataGenerator:DEBUG:Noise=10.000000; Noise Scale=0.100000; Mean Magnitude=1.000000
+2023-10-27 23:50:04,089:SensorDataGenerator:INFO:dataEntries tuple. Array Size: 1440  ND Size: 1440  Dimensions: 1  Shape: (1440,)  Type: float64
+2023-10-27 23:50:04,089:SensorAdapterManager:INFO:Started SensorAdapterManager.
+2023-10-27 23:50:04,091:base:INFO:Added job "SensorAdapterManager.handleTelemetry" to job store "default"
+2023-10-27 23:50:04,091:base:INFO:Scheduler started
+2023-10-27 23:50:04,092:base:DEBUG:Looking for jobs to run
+2023-10-27 23:50:04,092:base:DEBUG:Next wakeup is due at 2023-10-27 23:50:09.087899-04:00 (in 4.995167 seconds)
+2023-10-27 23:50:09,095:base:DEBUG:Looking for jobs to run
+2023-10-27 23:50:09,096:base:INFO:Running job "SensorAdapterManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-10-27 23:50:09 EDT)" (scheduled at 2023-10-27 23:50:09.087899-04:00)
+2023-10-27 23:50:09,097:SensorAdapterManager:DEBUG:Generated humidity data: name=HumiditySensor,typeID=1010,timeStamp=2023-10-28T03:50:09.097438+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:50:09,097:SensorAdapterManager:DEBUG:Generated pressure data: name=PressureSensor,typeID=1012,timeStamp=2023-10-28T03:50:09.097438+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:50:09,097:SensorAdapterManager:DEBUG:Generated temp data: name=TempSensor,typeID=1013,timeStamp=2023-10-28T03:50:09.097438+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:50:09,097:DefaultDataMessageListener:INFO:Sensor Message: name=HumiditySensor,typeID=1010,timeStamp=2023-10-28T03:50:09.097438+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:50:09,097:DefaultDataMessageListener:INFO:Sensor Message: name=PressureSensor,typeID=1012,timeStamp=2023-10-28T03:50:09.097438+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:50:09,097:DefaultDataMessageListener:INFO:Sensor Message: name=TempSensor,typeID=1013,timeStamp=2023-10-28T03:50:09.097438+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:50:09,098:base:INFO:Job "SensorAdapterManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-10-27 23:50:09 EDT)" executed successfully
+2023-10-27 23:50:09,098:base:DEBUG:Next wakeup is due at 2023-10-27 23:50:14.087899-04:00 (in 4.989465 seconds)
+2023-10-27 23:50:14,092:base:DEBUG:Looking for jobs to run
+2023-10-27 23:50:14,093:base:DEBUG:Next wakeup is due at 2023-10-27 23:50:19.087899-04:00 (in 4.993949 seconds)
+2023-10-27 23:50:14,094:base:INFO:Running job "SensorAdapterManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-10-27 23:50:19 EDT)" (scheduled at 2023-10-27 23:50:14.087899-04:00)
+2023-10-27 23:50:14,096:SensorAdapterManager:DEBUG:Generated humidity data: name=HumiditySensor,typeID=1010,timeStamp=2023-10-28T03:50:14.095944+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:50:14,097:SensorAdapterManager:DEBUG:Generated pressure data: name=PressureSensor,typeID=1012,timeStamp=2023-10-28T03:50:14.095944+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:50:14,097:SensorAdapterManager:DEBUG:Generated temp data: name=TempSensor,typeID=1013,timeStamp=2023-10-28T03:50:14.095944+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:50:14,097:DefaultDataMessageListener:INFO:Sensor Message: name=HumiditySensor,typeID=1010,timeStamp=2023-10-28T03:50:14.095944+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:50:14,098:DefaultDataMessageListener:INFO:Sensor Message: name=PressureSensor,typeID=1012,timeStamp=2023-10-28T03:50:14.095944+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:50:14,099:DefaultDataMessageListener:INFO:Sensor Message: name=TempSensor,typeID=1013,timeStamp=2023-10-28T03:50:14.095944+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:50:14,099:base:INFO:Job "SensorAdapterManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-10-27 23:50:19 EDT)" executed successfully
 
 .
 
 .
 
-2023-09-29 19:56:58,821:base:DEBUG:Looking for jobs to run
-2023-09-29 19:56:58,821:base:DEBUG:Next wakeup is due at 2023-09-29 19:57:03.811183-04:00 (in 4.989206 seconds)
-2023-09-29 19:56:58,822:base:INFO:Running job "SensorAdapterManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-09-29 19:57:03 EDT)" (scheduled at 2023-09-29 19:56:58.811183-04:00)
-2023-09-29 19:56:58,822:SensorAdapterManager:DEBUG:Generated humidity data: name=HumiditySensor,typeID=1010,timeStamp=2023-09-29T23:56:58.822605+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:56:58,822:SensorAdapterManager:DEBUG:Generated pressure data: name=PressureSensor,typeID=1012,timeStamp=2023-09-29T23:56:58.822605+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:56:58,822:SensorAdapterManager:DEBUG:Generated temp data: name=TempSensor,typeID=1013,timeStamp=2023-09-29T23:56:58.822605+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:56:58,822:DefaultDataMessageListener:INFO:Sensor Message: name=HumiditySensor,typeID=1010,timeStamp=2023-09-29T23:56:58.822605+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:56:58,822:DefaultDataMessageListener:INFO:Sensor Message: name=PressureSensor,typeID=1012,timeStamp=2023-09-29T23:56:58.822605+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:56:58,822:DefaultDataMessageListener:INFO:Sensor Message: name=TempSensor,typeID=1013,timeStamp=2023-09-29T23:56:58.822605+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:56:58,822:base:INFO:Job "SensorAdapterManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-09-29 19:57:03 EDT)" executed successfully
-2023-09-29 19:57:03,813:base:DEBUG:Looking for jobs to run
-2023-09-29 19:57:03,814:base:DEBUG:Next wakeup is due at 2023-09-29 19:57:08.811183-04:00 (in 4.997056 seconds)
-2023-09-29 19:57:03,814:base:INFO:Running job "SensorAdapterManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-09-29 19:57:08 EDT)" (scheduled at 2023-09-29 19:57:03.811183-04:00)
-2023-09-29 19:57:03,814:SensorAdapterManager:DEBUG:Generated humidity data: name=HumiditySensor,typeID=1010,timeStamp=2023-09-29T23:57:03.814471+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:57:03,814:SensorAdapterManager:DEBUG:Generated pressure data: name=PressureSensor,typeID=1012,timeStamp=2023-09-29T23:57:03.814471+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:57:03,814:SensorAdapterManager:DEBUG:Generated temp data: name=TempSensor,typeID=1013,timeStamp=2023-09-29T23:57:03.814471+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:57:03,814:DefaultDataMessageListener:INFO:Sensor Message: name=HumiditySensor,typeID=1010,timeStamp=2023-09-29T23:57:03.814471+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:57:03,814:DefaultDataMessageListener:INFO:Sensor Message: name=PressureSensor,typeID=1012,timeStamp=2023-09-29T23:57:03.814471+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:57:03,814:DefaultDataMessageListener:INFO:Sensor Message: name=TempSensor,typeID=1013,timeStamp=2023-09-29T23:57:03.814471+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-09-29 19:57:03,814:base:INFO:Job "SensorAdapterManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-09-29 19:57:08 EDT)" executed successfully
-2023-09-29 19:57:03,830:SensorAdapterManager:INFO:Stopped SensorAdapterManager.
-2023-09-29 19:57:03,830:base:INFO:Scheduler has been shut down
-2023-09-29 19:57:03,830:base:DEBUG:Looking for jobs to run
-2023-09-29 19:57:03,830:base:DEBUG:No jobs; waiting until a job is added
+2023-10-27 23:51:04,091:base:DEBUG:Looking for jobs to run
+2023-10-27 23:51:04,091:base:DEBUG:Next wakeup is due at 2023-10-27 23:51:09.087899-04:00 (in 4.996309 seconds)
+2023-10-27 23:51:04,091:base:INFO:Running job "SensorAdapterManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-10-27 23:51:09 EDT)" (scheduled at 2023-10-27 23:51:04.087899-04:00)
+2023-10-27 23:51:04,092:SensorAdapterManager:DEBUG:Generated humidity data: name=HumiditySensor,typeID=1010,timeStamp=2023-10-28T03:51:04.092360+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:51:04,092:SensorAdapterManager:DEBUG:Generated pressure data: name=PressureSensor,typeID=1012,timeStamp=2023-10-28T03:51:04.092360+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:51:04,092:SensorAdapterManager:DEBUG:Generated temp data: name=TempSensor,typeID=1013,timeStamp=2023-10-28T03:51:04.092360+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:51:04,092:DefaultDataMessageListener:INFO:Sensor Message: name=HumiditySensor,typeID=1010,timeStamp=2023-10-28T03:51:04.092360+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:51:04,092:DefaultDataMessageListener:INFO:Sensor Message: name=PressureSensor,typeID=1012,timeStamp=2023-10-28T03:51:04.092360+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:51:04,092:DefaultDataMessageListener:INFO:Sensor Message: name=TempSensor,typeID=1013,timeStamp=2023-10-28T03:51:04.092360+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-10-27 23:51:04,092:base:INFO:Job "SensorAdapterManager.handleTelemetry (trigger: interval[0:00:05], next run at: 2023-10-27 23:51:09 EDT)" executed successfully
+2023-10-27 23:51:04,106:SensorAdapterManager:INFO:Stopped SensorAdapterManager.
+2023-10-27 23:51:04,106:base:INFO:Scheduler has been shut down
+2023-10-27 23:51:04,106:base:DEBUG:Looking for jobs to run
+2023-10-27 23:51:04,106:base:DEBUG:No jobs; waiting until a job is added
+.
 ----------------------------------------------------------------------
-Ran 1 test in 60.050s
+Ran 1 test in 60.048s
 
 OK
 ```
@@ -774,45 +758,43 @@ OK
 <summary>ActuatorAdapterManagerTest</summary>
 
 ```
-Finding files... done.
-Importing test modules ... done.
-
-2023-09-29 19:51:16,379:ActuatorAdapterManagerTest:INFO:Testing ActuatorAdapterManager class...
-2023-09-29 19:51:16,380:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-09-29 19:51:16,380:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-09-29 19:51:16,381:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001E04A0578B0>
-2023-09-29 19:51:16,381:ActuatorAdapterManager:INFO:Actuator command received for location ID constraineddevice001. Processing...
-2023-09-29 19:51:16,381:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 1 50.0
-2023-09-29 19:51:16,381:BaseActuatorSimTask:INFO:Activating actuator...
-2023-09-29 19:51:16,381:BaseActuatorSimTask:INFO:Simulating HumidifierActuator actuator ON: 
+2023-10-27 23:53:01,468:ActuatorAdapterManagerTest:INFO:Testing ActuatorAdapterManager class...
+2023-10-27 23:53:01,469:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-10-27 23:53:01,469:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-10-27 23:53:01,470:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001F509CAEBC0>
+2023-10-27 23:53:01,470:ActuatorAdapterManager:INFO:Actuator command received for location ID constraineddevice001. Processing...
+2023-10-27 23:53:01,470:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 1 50.0
+2023-10-27 23:53:01,470:BaseActuatorSimTask:INFO:Activating actuator...
+2023-10-27 23:53:01,470:BaseActuatorSimTask:INFO:Simulating HumidifierActuator actuator ON: 
 *******
 * O N *
 *******
 HumidifierActuator VALUE -> 50.0
 =======
-2023-09-29 19:51:16,381:ActuatorAdapterManager:INFO:Actuator command received for location ID constraineddevice001. Processing...
-2023-09-29 19:51:16,382:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 0 50.0
-2023-09-29 19:51:16,382:BaseActuatorSimTask:INFO:Deactivating actuator...
-2023-09-29 19:51:16,382:BaseActuatorSimTask:INFO:Simulating HumidifierActuator actuator OFF: 
+2023-10-27 23:53:01,470:ActuatorAdapterManager:INFO:Actuator command received for location ID constraineddevice001. Processing...
+2023-10-27 23:53:01,470:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 0 50.0
+2023-10-27 23:53:01,471:BaseActuatorSimTask:INFO:Deactivating actuator...
+2023-10-27 23:53:01,471:BaseActuatorSimTask:INFO:Simulating HumidifierActuator actuator OFF: 
 *******
 * OFF *
 *******
-2023-09-29 19:51:16,382:ActuatorAdapterManager:INFO:Actuator command received for location ID constraineddevice001. Processing...
-2023-09-29 19:51:16,382:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 1 22.5
-2023-09-29 19:51:16,382:BaseActuatorSimTask:INFO:Activating actuator...
-2023-09-29 19:51:16,382:BaseActuatorSimTask:INFO:Simulating HvacActuator actuator ON: 
+.2023-10-27 23:53:01,471:ActuatorAdapterManager:INFO:Actuator command received for location ID constraineddevice001. Processing...
+2023-10-27 23:53:01,471:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 1 22.5
+2023-10-27 23:53:01,471:BaseActuatorSimTask:INFO:Activating actuator...
+2023-10-27 23:53:01,471:BaseActuatorSimTask:INFO:Simulating HvacActuator actuator ON: 
 *******
 * O N *
 *******
 HvacActuator VALUE -> 22.5
 =======
-2023-09-29 19:51:16,382:ActuatorAdapterManager:INFO:Actuator command received for location ID constraineddevice001. Processing...
-2023-09-29 19:51:16,382:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 0 22.5
-2023-09-29 19:51:16,382:BaseActuatorSimTask:INFO:Deactivating actuator...
-2023-09-29 19:51:16,382:BaseActuatorSimTask:INFO:Simulating HvacActuator actuator OFF: 
+2023-10-27 23:53:01,471:ActuatorAdapterManager:INFO:Actuator command received for location ID constraineddevice001. Processing...
+2023-10-27 23:53:01,471:BaseActuatorSimTask:DEBUG:New actuator command and value to be applied: 0 22.5
+2023-10-27 23:53:01,471:BaseActuatorSimTask:INFO:Deactivating actuator...
+2023-10-27 23:53:01,471:BaseActuatorSimTask:INFO:Simulating HvacActuator actuator OFF: 
 *******
 * OFF *
 *******
+.
 ----------------------------------------------------------------------
 Ran 2 tests in 0.003s
 
