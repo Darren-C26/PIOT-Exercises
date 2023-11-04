@@ -20,7 +20,8 @@ URL: https://github.com/Darren-C26/piot-java-components/tree/labmodule07
 ## UML Design Diagram(s)
 <p align="center">
 
-![GDA Implementation UML (Module07)](image.png)</p>
+|![GDA Implementation UML (Module07)](image.png)</p>|
+|-|
 
 <p align="center">GDA Implementation UML (Module07)</p>
 
