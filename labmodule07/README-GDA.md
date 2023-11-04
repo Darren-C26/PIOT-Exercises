@@ -6,7 +6,7 @@
 ### What does your implementation do?
 A Gateway Device Application, or GDA, is a software application that acts as an intermediary between IoT devices (ie. constrained devices) and a cloud/edge-computing infrastructure. In particular, the GDA faciliates the communication and the exchange of data between the CDA and the cloud.
 
-This module focuses on building on the functionality of the GDA by integrating it with an open source MQTT library. The integration process is similar to the implementation created in the last module for the CDA. An adapter is used in conjunction with the Eclipse Paho Client MQTT library to connect a Paho Java Client with an MQTT broker. This will server as the foundation for the eventual integration of cloud services and communication with the CDA in a reliable manner.
+This module focuses on building on the functionality of the GDA by integrating it with an open source MQTT library. The integration process is similar to the implementation created in the last module for the CDA. An adapter is used in conjunction with the **Eclipse Paho Client MQTT** library to connect a Paho Java Client with an MQTT broker. This will server as the foundation for the eventual integration of cloud services and communication with the CDA in a reliable manner.
 
 ### How does your implementation work?
 
