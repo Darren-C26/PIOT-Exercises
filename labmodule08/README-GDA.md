@@ -35,6 +35,7 @@ Initialization:
 
 Utility:
 - **hasResource(String name)**: Checks if a specified resource exists.
+
 These methods collectively enable the management of resources, control of the CoAP server, and interaction with data message listeners, providing a comprehensive framework for CoAP communication in the IoT network.
 
 ## Code Repository and Branch
