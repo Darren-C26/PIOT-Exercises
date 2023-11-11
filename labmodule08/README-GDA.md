@@ -6,13 +6,36 @@
 ### What does your implementation do?
 A Gateway Device Application, or GDA, is a software application that acts as an intermediary between IoT devices (ie. constrained devices) and a cloud/edge-computing infrastructure. In particular, the GDA faciliates the communication and the exchange of data between the CDA and the cloud.
 
-This module focuses on building on the functionality of the GDA by integrating a CoAP Server Gateway application. The integration process is similar to the CDA's. In the GDA, the CoAP implementation primarily serves as a server, playing a central role in coordinating and managing communication within the IoT network. As a CoAP server, the GDA receives data from multiple Constrained Device Applications (CDAs). It handles incoming **PUT** requests for sensor data updates and responds to **GET** requests for actuator commands or configurations. The CoAPServerAdapter in the GDA is instrumental in managing these interactions, serving as a hub for coordinating IoT activities and ensuring effective communication with the CDAs.
+This module focuses on building on the functionality of the GDA by integrating a CoAP Server Gateway application. The integration process is similar to the CDA's. In the GDA, the CoAP implementation primarily serves as a server, playing a central role in coordinating and managing communication within the IoT network. As a CoAP server, the GDA receives data from multiple Constrained Device Applications (CDAs). It handles incoming **PUT** requests for sensor data updates and responds to **GET** requests for actuator commands or configurations. The CoAP Server Gateway in the GDA is instrumental in managing these interactions, serving as a hub for coordinating IoT activities and ensuring effective communication with the CDAs.
 
 ### How does your implementation work?
 
 The **CoapServerGateway** class in the Gateway Device Application (GDA) is responsible for managing a CoAP server to facilitate communication within the IoT network. The class includes methods to add resources dynamically, check for the existence of a resource, set a data message listener, start and stop the CoAP server. The server initialization involves creating a CoAP server instance, registering default resources, and enabling message logging for endpoints. The class allows the addition of resources in a hierarchical manner, ensuring efficient resource handling. Pre-defined resources for actuator commands, sensor messages, and system performance updates are initialized and associated with corresponding handlers. 
 
-The implementation in the GDA adheres to the **CoAP IETF specification (RFC 7252)**, designed for lightweight, machine-to-machine communication in constrained environments. It leverages **UDP/IP** datagram sockets for communication and supports different security modes based on encryption requirements. The CoAP protocol's asynchronous message exchanges, incorporating **confirmed (CON)** and **nonconfirmed (NON)** message types, contribute to the reliability of communication, ensuring that data is transmitted efficiently and securely.
+A list of key methods and their respective actions:
+
+Constructor:
+- **CoapServerGateway(IDataMessageListener dataMsgListener)**: Initializes the CoapServerGateway with a specified data message listener.
+
+Resource Management:
+- **addResource(ResourceNameEnum resourceType, String endName, Resource resource)**: Adds a resource to the CoAP server dynamically.
+- **createAndAddResourceChain(ResourceNameEnum resourceType, Resource resource)**: Creates and adds a resource chain based on the resource type.
+- **createResourceChain(ResourceNameEnum resource)**: Creates a resource chain based on the resource type.
+- **initDefaultResources()**: Initializes pre-defined resources for actuator commands, sensor messages, and system performance updates.
+
+Server Control:
+- **startServer()**: Starts the CoAP server and enables message logging for endpoints.
+- **stopServer()**: Stops the CoAP server.
+
+Data Message Listener:
+- **setDataMessageListener(IDataMessageListener listener)**: Sets the data message listener for handling data messages.
+
+Initialization:
+- **initServer(ResourceNameEnum... resources)**: Initializes the CoAP server, registering default resources and applying configuration.
+
+Utility:
+- **hasResource(String name)**: Checks if a specified resource exists.
+These methods collectively enable the management of resources, control of the CoAP server, and interaction with data message listeners, providing a comprehensive framework for CoAP communication in the IoT network.
 
 ## Code Repository and Branch
 Please click the link before to be directed to the <b>GDA</b> repository.
