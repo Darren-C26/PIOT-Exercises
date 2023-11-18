@@ -6,37 +6,29 @@
 ### What does your implementation do?
 A Gateway Device Application, or GDA, is a software application that acts as an intermediary between IoT devices (ie. constrained devices) and a cloud/edge-computing infrastructure. In particular, the GDA faciliates the communication and the exchange of data between the CDA and the cloud.
 
-This module focuses on building on the functionality of the GDA by integrating a CoAP Server Gateway application. The integration process is similar to the CDA's. In the GDA, the CoAP implementation primarily serves as a server, playing a central role in coordinating and managing communication within the IoT network. As a CoAP server, the GDA receives data from multiple Constrained Device Applications (CDAs). It handles incoming **PUT** requests for sensor data updates and responds to **GET** requests for actuator commands or configurations. The CoAP Server Gateway in the GDA is instrumental in managing these interactions, serving as a hub for coordinating IoT activities and ensuring effective communication with the CDAs.
+This module focuses on building on the functionality of the GDA by integrating a CoAP Client Connector. The integration process is similar to the CDA's. The GDA writes actuator commands to the CoAP server. The server exposes a resource named "PIOT/ConstrainedDevice/ActuatorCmd," and the GDA connects to it using a **PUT** request, sending **ActuatorData** converted to JSON as the payload. The client handles the response code, indicating success or failure, and reacts accordingly.
 
 ### How does your implementation work?
 
-The **CoapServerGateway** class in the Gateway Device Application (GDA) is responsible for managing a CoAP server to facilitate communication within the IoT network. The class includes methods to add resources dynamically, check for the existence of a resource, set a data message listener, start and stop the CoAP server. The server initialization involves creating a CoAP server instance, registering default resources, and enabling message logging for endpoints. The class allows the addition of resources in a hierarchical manner, ensuring efficient resource handling. Pre-defined resources for actuator commands, sensor messages, and system performance updates are initialized and associated with corresponding handlers. 
+The class **CoapClientConnector**, serves as a CoAP client to interact with a remote CoAP server. Here's an explanation of how the implementation works:
 
-A list of key methods and their respective actions:
+Initialization: The class initializes its parameters such as the CoAP protocol, host, port, and server address based on configuration settings. It also creates a CoapClient instance for communication with the CoAP server.
 
-Constructor:
-- **CoapServerGateway(IDataMessageListener dataMsgListener)**: Initializes the CoapServerGateway with a specified data message listener.
+Discovery: The sendDiscoveryRequest method sends a CoAP discovery request to the server to retrieve information about available resources. The discovered WebLinks (resources) and their attributes are logged.
 
-Resource Management:
-- **addResource(ResourceNameEnum resourceType, String endName, Resource resource)**: Adds a resource to the CoAP server dynamically.
-- **createAndAddResourceChain(ResourceNameEnum resourceType, Resource resource)**: Creates and adds a resource chain based on the resource type.
-- **createResourceChain(ResourceNameEnum resource)**: Creates a resource chain based on the resource type.
-- **initDefaultResources()**: Initializes pre-defined resources for actuator commands, sensor messages, and system performance updates.
+Request Methods (GET, POST, PUT, DELETE): The class provides methods for sending CoAP requests (GET, POST, PUT, DELETE) to the server. The methods prepare the request, set the appropriate URI, and handle the CoAP response. The actual logic for handling responses is marked with "TODO" comments, indicating that the student needs to implement specific functionality based on the application's requirements.
 
-Server Control:
-- **startServer()**: Starts the CoAP server and enables message logging for endpoints.
-- **stopServer()**: Stops the CoAP server.
+Observer Pattern: The class supports the CoAP observe pattern for observing changes in a resource over time. The startObserver method initiates an observation on a specified resource, and a corresponding CoapObserveRelation is established. The received updates trigger the onLoad method in the SensorDataObserverHandler class, which logs the received CoAP response.
 
-Data Message Listener:
-- **setDataMessageListener(IDataMessageListener listener)**: Sets the data message listener for handling data messages.
+Error Handling: The class provides basic error handling. If an error occurs during CoAP communication (e.g., in the onError method of the SensorDataObserverHandler), a warning is logged.
 
-Initialization:
-- **initServer(ResourceNameEnum... resources)**: Initializes the CoAP server, registering default resources and applying configuration.
+Data Message Listener: The class allows setting a data message listener (IDataMessageListener). The listener is expected to handle incoming data messages, but the actual implementation is left as a task for the student.
 
-Utility:
-- **hasResource(String name)**: Checks if a specified resource exists.
+Configuration: The class reads configuration settings (such as host, port, and protocol) from a configuration file using the ConfigUtil class.
 
-These methods collectively enable the management of resources, control of the CoAP server, and interaction with data message listeners, providing a comprehensive framework for CoAP communication in the IoT network.
+Security: The class supports secure CoAP communication if configured to do so.
+
+In summary, this class provides a flexible and extensible CoAP client implementation that can be used in an IoT context to interact with a CoAP server, discover resources, and observe resource changes. The specific logic for handling different types of responses and messages is left for the student to implement.
 
 ## Code Repository and Branch
 Please click the link before to be directed to the <b>GDA</b> repository.
