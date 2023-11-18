@@ -12,23 +12,23 @@ This module focuses on building on the functionality of the GDA by integrating a
 
 The class **CoapClientConnector**, serves as a CoAP client to interact with a remote CoAP server. Here's an explanation of how the implementation works:
 
-Initialization: The class initializes its parameters such as the CoAP protocol, host, port, and server address based on configuration settings. It also creates a CoapClient instance for communication with the CoAP server.
+**Initialization**: The class initializes its parameters such as the CoAP protocol, host, port, and server address based on configuration settings. It also creates a CoapClient instance for communication with the CoAP server.
 
-Discovery: The sendDiscoveryRequest method sends a CoAP discovery request to the server to retrieve information about available resources. The discovered WebLinks (resources) and their attributes are logged.
+**Discovery**: The **sendDiscoveryRequest** method sends a CoAP discovery request to the server to retrieve information about available resources. The discovered WebLinks (resources) and their attributes are logged.
 
-Request Methods (GET, POST, PUT, DELETE): The class provides methods for sending CoAP requests (GET, POST, PUT, DELETE) to the server. The methods prepare the request, set the appropriate URI, and handle the CoAP response. The actual logic for handling responses is marked with "TODO" comments, indicating that the student needs to implement specific functionality based on the application's requirements.
+**Request Methods (GET, POST, PUT, DELETE)**: The class provides methods for sending CoAP requests (GET, POST, PUT, DELETE) to the server. The methods prepare the request, set the appropriate URI, and handle the CoAP response. The actual logic for handling responses is marked with "TODO" comments, indicating that the student needs to implement specific functionality based on the application's requirements.
 
-Observer Pattern: The class supports the CoAP observe pattern for observing changes in a resource over time. The startObserver method initiates an observation on a specified resource, and a corresponding CoapObserveRelation is established. The received updates trigger the onLoad method in the SensorDataObserverHandler class, which logs the received CoAP response.
+**Observer Pattern**: The class supports the CoAP observe pattern for observing changes in a resource over time. The startObserver method initiates an observation on a specified resource, and a corresponding CoapObserveRelation is established. The received updates trigger the onLoad method in the SensorDataObserverHandler class, which logs the received CoAP response.
 
-Error Handling: The class provides basic error handling. If an error occurs during CoAP communication (e.g., in the onError method of the SensorDataObserverHandler), a warning is logged.
+**Error Handling**: The class provides basic error handling. If an error occurs during CoAP communication (e.g., in the onError method of the SensorDataObserverHandler), a warning is logged.
 
-Data Message Listener: The class allows setting a data message listener (IDataMessageListener). The listener is expected to handle incoming data messages, but the actual implementation is left as a task for the student.
+**Data Message Listener**: The class allows setting a data message listener (**IDataMessageListener**). The listener is expected to handle incoming data messages, but the actual implementation is left as a task for the student.
 
-Configuration: The class reads configuration settings (such as host, port, and protocol) from a configuration file using the ConfigUtil class.
+**Configuration**: The class reads configuration settings (such as host, port, and protocol) from a configuration file using the ConfigUtil class.
 
-Security: The class supports secure CoAP communication if configured to do so.
+**Security**: The class supports secure CoAP communication if configured to do so.
 
-In summary, this class provides a flexible and extensible CoAP client implementation that can be used in an IoT context to interact with a CoAP server, discover resources, and observe resource changes. The specific logic for handling different types of responses and messages is left for the student to implement.
+In summary, this class provides a flexible and extensible CoAP client implementation that can be used in an IoT context to interact with a CoAP server, discover resources, and observe resource changes.
 
 ## Code Repository and Branch
 Please click the link before to be directed to the <b>GDA</b> repository.
