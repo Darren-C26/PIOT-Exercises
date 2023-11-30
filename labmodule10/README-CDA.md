@@ -7,10 +7,11 @@
 ### What does your implementation do?
 A Constrained Device Application, or CDA, is a software application that runs on a "constrained" (ie. resource-limited) device. The purpose of the CDA is to gather sensor data, control actuators, and communicate this information to other devices.
 
-This module is designed to facilitate communication with the CoAP server hosted on the General Device Agent (GDA).The CDA writes telemetry updates to a specific resource named "PIOT/ConstrainedDevice/SensorMsg" on the GDA's CoAP server. The client connects to the resource and issues a PUT request, sending Sensor Data in JSON format as the payload. The server responds with a success code if the resource is created or changed, and the client handles exceptions or unsuccessful responses appropriately. In addition, the CDA observes actuator commands by monitoring the "PIOT/ConstrainedDevice/ActuatorCmd" resource using an OBSERVE request. The client connects to the resource and issues an OBSERVE request, and the GDA responds with Actuator Data in JSON format whenever an update is available. The GDA, as the CoAP server, is already designed to support these request types, handling PUT requests for telemetry updates and responding to OBSERVE requests for actuator commands.
+In this implementation, the focus is on integrating the Edge Tier applications—the Constrained Device Application (CDA) and the Gateway Device Application (GDA) within an IoT ecosystem. The integration involves dealing with challenges such as multiple protocols, security constraints, and data formatting idiosyncrasies. The chapter describes the integration of the two applications using both CoAP and MQTT protocols. Specifically, it discusses testing the connection layers, such as the MqttClientConnector with a locally running MQTT broker and the GDA’s CoapServerGateway with the CDA’s CoapClientConnector.
 
 ### How does your implementation work?
-The **CoapClientConnector** class serves as a CoAP client for the CDA. The constructor initializes the client with configuration details such as the host and port. The class provides methods to perform various CoAP operations, such as sending **GET**, **POST**, **PUT**, **DELETE** requests, and observing resources. For example, the **sendGetRequest** method issues a **GET** request to a specified resource, and the response is processed in the **_onGetResponse** method. If the response payload corresponds to actuator command data, it is decoded and forwarded to the **data message listener**. Similarly, the **sendPostRequest**, **sendPutRequest**, and **sendDeleteRequest** methods handle **POST**, **PUT**, and **DELETE** requests, respectively. The class also allows for observing resources, where the **startObserver** method initiates observation, and the **stopObserver** method cancels observation. The **setDataMessageListener** method sets the data message listener for handling incoming data messages. The class uses the **CoAPthon** library for CoAP communication, and the **_initClient** method initializes the CoAP client. Overall, the CoapClientConnector facilitates interaction between the CDA and the CoAP server, allowing for the exchange of telemetry and actuator command data.
+
+For the CDA, the implementation involves configuring MQTT communications to use Transport Layer Security (TLS) for encrypted messaging traffic between the CDA and the GDA. Enabling encrypted MQTT connections sets the stage for secure communication between the GDA and the cloud. With connection encryption in place, the CDA and GDA can securely exchange messages, allowing for secure actuation commands from the GDA to the CDA or telemetry from the CDA to the GDA for processing.
 
 
 ## Code Repository and Branch
@@ -1566,33 +1567,3 @@ OK (skipped=4)
 
 <br>
 
-<details close>
-<summary>DeviceDataManagerIntegrationTest</summary>
-
-```
-2023-11-30 01:40:38,710:DeviceDataManagerIntegrationTest:INFO:Testing DeviceDataManager class...
-2023-11-30 01:40:38,710:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-11-30 01:40:38,711:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-11-30 01:40:38,711:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000002726949A1D0>
-2023-11-30 01:40:38,712:MqttClientConnector:INFO:	MQTT Client ID:   DeviceDataMQTT
-2023-11-30 01:40:38,712:MqttClientConnector:INFO:	MQTT Broker Host: 127.0.0.1
-2023-11-30 01:40:38,712:MqttClientConnector:INFO:	MQTT Broker Port: 1883
-2023-11-30 01:40:38,712:MqttClientConnector:INFO:	MQTT Keep Alive:  60
-2023-11-30 01:40:38,712:DeviceDataManager:INFO:Starting DeviceDataManager...
-2023-11-30 01:40:38,712:MqttClientConnector:INFO:MQTT client connecting to broker at host: 127.0.0.1
-2023-11-30 01:40:38,718:MqttClientConnector:INFO:[Callback] Connected to MQTT broker. Result code: 0
-2023-11-30 01:40:38,718:DeviceDataManager:INFO:Started DeviceDataManager.
-2023-11-30 01:40:38,719:MqttClientConnector:INFO:MQTT client subscribed: <paho.mqtt.client.Client object at 0x000002726949A140>
-2023-11-30 01:40:38,719:MqttClientConnector:INFO:MQTT client subscribed: <paho.mqtt.client.Client object at 0x000002726949A140>
-2023-11-30 01:41:38,732:DeviceDataManager:INFO:Stopping DeviceDataManager...
-2023-11-30 01:41:38,732:MqttClientConnector:INFO:Disconnecting MQTT client from broker: 127.0.0.1
-2023-11-30 01:41:38,733:DeviceDataManager:INFO:Stopped DeviceDataManager.
-.
-----------------------------------------------------------------------
-Ran 1 test in 60.023s
-
-OK
-```
-</details>
-
-<br>
