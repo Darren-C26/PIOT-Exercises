@@ -6,29 +6,11 @@
 ### What does your implementation do?
 A Gateway Device Application, or GDA, is a software application that acts as an intermediary between IoT devices (ie. constrained devices) and a cloud/edge-computing infrastructure. In particular, the GDA faciliates the communication and the exchange of data between the CDA and the cloud.
 
-This module focuses on building on the functionality of the GDA by integrating a CoAP Client Connector. The integration process is similar to the CDA's. The GDA writes actuator commands to the CoAP server. The server exposes a resource named "PIOT/ConstrainedDevice/ActuatorCmd," and the GDA connects to it using a **PUT** request, sending **ActuatorData** converted to JSON as the payload. The client handles the response code, indicating success or failure, and reacts accordingly.
+In this implementation, the focus is on integrating the Edge Tier applications—the Constrained Device Application (CDA) and the Gateway Device Application (GDA) within an IoT ecosystem. The integration involves dealing with challenges such as multiple protocols, security constraints, and data formatting idiosyncrasies. The chapter describes the integration of the two applications using both CoAP and MQTT protocols. Specifically, it discusses testing the connection layers, such as the MqttClientConnector with a locally running MQTT broker and the GDA’s CoapServerGateway with the CDA’s CoapClientConnector.
 
 ### How does your implementation work?
 
-The class **CoapClientConnector**, serves as a CoAP client to interact with a remote CoAP server. Here's an explanation of how the implementation works:
-
-**Initialization**: The class initializes its parameters such as the CoAP protocol, host, port, and server address based on configuration settings. It also creates a CoapClient instance for communication with the CoAP server.
-
-**Discovery**: The **sendDiscoveryRequest** method sends a CoAP discovery request to the server to retrieve information about available resources. The discovered WebLinks (resources) and their attributes are logged.
-
-**Request Methods (GET, POST, PUT, DELETE)**: The class provides methods for sending CoAP requests (GET, POST, PUT, DELETE) to the server. The methods prepare the request, set the appropriate URI, and handle the CoAP response. The actual logic for handling responses is marked with "TODO" comments, indicating that the student needs to implement specific functionality based on the application's requirements.
-
-**Observer Pattern**: The class supports the CoAP observe pattern for observing changes in a resource over time. The startObserver method initiates an observation on a specified resource, and a corresponding CoapObserveRelation is established. The received updates trigger the onLoad method in the SensorDataObserverHandler class, which logs the received CoAP response.
-
-**Error Handling**: The class provides basic error handling. If an error occurs during CoAP communication (e.g., in the onError method of the SensorDataObserverHandler), a warning is logged.
-
-**Data Message Listener**: The class allows setting a data message listener (**IDataMessageListener**). The listener is expected to handle incoming data messages, but the actual implementation is left as a task for the student.
-
-**Configuration**: The class reads configuration settings (such as host, port, and protocol) from a configuration file using the ConfigUtil class.
-
-**Security**: The class supports secure CoAP communication if configured to do so.
-
-In summary, this class provides a flexible and extensible CoAP client implementation that can be used in an IoT context to interact with a CoAP server, discover resources, and observe resource changes.
+Regarding the GDA, modifications are made to the MQTT client connector class to support TLS-encrypted connections with the broker. Additionally, the DeviceDataManager in both applications gains additional intelligence to process messages intelligently and make decisions based on the received data. The chapter spans configuration, programming, and integration testing, emphasizing functional exercises to enhance the capabilities of both the CDA and GDA. The design remains consistent with the Edge Tier integration circle, building on the foundation laid out in
 
 ## Code Repository and Branch
 Please click the link before to be directed to the <b>GDA</b> repository.
@@ -669,23 +651,29 @@ INFO: Observing resource [START]: coap://localhost:5683/PIOT/GatewayDevice/MgmtS
 <b>New Tests Executed:</b>
 
 <details close>
-<summary>DeviceDataManagerCallbackTest</summary>
+<summary>DeviceDataManagerIntegrationTest</summary>
 
 ```
-2023-11-30 01:32:11,435:DeviceDataManagerCallbackTest:INFO:Testing DeviceDataManager class...
-2023-11-30 01:32:11,435:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
-2023-11-30 01:32:11,435:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
-2023-11-30 01:32:11,435:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001FDDDB0A410>
-2023-11-30 01:32:11,436:MqttClientConnector:INFO:	MQTT Client ID:   DeviceDataMQTT
-2023-11-30 01:32:11,436:MqttClientConnector:INFO:	MQTT Broker Host: 127.0.0.1
-2023-11-30 01:32:11,436:MqttClientConnector:INFO:	MQTT Broker Port: 1883
-2023-11-30 01:32:11,436:MqttClientConnector:INFO:	MQTT Keep Alive:  60
-2023-11-30 01:32:11,436:DeviceDataManager:INFO:Actuator data: name=Not Set,typeID=1001,timeStamp=2023-11-30T06:32:11.436946+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
-2023-11-30 01:32:11,436:DeviceDataManager:INFO:Processing actuator command message.
-
-E
-
-Ran 1 test in 0.004s
+2023-11-30 01:40:38,710:DeviceDataManagerIntegrationTest:INFO:Testing DeviceDataManager class...
+2023-11-30 01:40:38,710:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-11-30 01:40:38,711:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-11-30 01:40:38,711:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000002726949A1D0>
+2023-11-30 01:40:38,712:MqttClientConnector:INFO:	MQTT Client ID:   DeviceDataMQTT
+2023-11-30 01:40:38,712:MqttClientConnector:INFO:	MQTT Broker Host: 127.0.0.1
+2023-11-30 01:40:38,712:MqttClientConnector:INFO:	MQTT Broker Port: 1883
+2023-11-30 01:40:38,712:MqttClientConnector:INFO:	MQTT Keep Alive:  60
+2023-11-30 01:40:38,712:DeviceDataManager:INFO:Starting DeviceDataManager...
+2023-11-30 01:40:38,712:MqttClientConnector:INFO:MQTT client connecting to broker at host: 127.0.0.1
+2023-11-30 01:40:38,718:MqttClientConnector:INFO:[Callback] Connected to MQTT broker. Result code: 0
+2023-11-30 01:40:38,718:DeviceDataManager:INFO:Started DeviceDataManager.
+2023-11-30 01:40:38,719:MqttClientConnector:INFO:MQTT client subscribed: <paho.mqtt.client.Client object at 0x000002726949A140>
+2023-11-30 01:40:38,719:MqttClientConnector:INFO:MQTT client subscribed: <paho.mqtt.client.Client object at 0x000002726949A140>
+2023-11-30 01:41:38,732:DeviceDataManager:INFO:Stopping DeviceDataManager...
+2023-11-30 01:41:38,732:MqttClientConnector:INFO:Disconnecting MQTT client from broker: 127.0.0.1
+2023-11-30 01:41:38,733:DeviceDataManager:INFO:Stopped DeviceDataManager.
+.
+----------------------------------------------------------------------
+Ran 1 test in 60.023s
 
 OK
 ```
@@ -694,36 +682,50 @@ OK
 <br>
 
 <details close>
-<summary>MQTTClientConnectorTest (testActuatorCmdPubSub)</summary>
+<summary>MQTTClientTest (messagePublish)</summary>
 
 ```
-2023-11-30 01:38:02,713:MqttClientConnector:INFO:Using requested client ID: CDAMqttClientConnectorTest001
-2023-11-30 01:38:02,713:MqttClientConnector:INFO:	MQTT Broker Host: localhost
-2023-11-30 01:38:02,713:MqttClientConnector:INFO:	MQTT Broker Port: 1883
-2023-11-30 01:38:02,713:MqttClientConnector:INFO:	MQTT Keep Alive:  30
-2023-11-30 01:38:02,714:DataUtil:INFO:Created DataUtil instance.
-2023-11-30 01:38:02,714:DataUtil:DEBUG:Encoding ActuatorData to JSON [pre]  --> name=Not Set,timeStamp=2023-11-30 01:38:02.714167,command=0,hasError=False,statusCode=0,stateData=None,curValue=0.0,actuatorType=0
-2023-11-30 01:38:02,714:DataUtil:INFO:Encoding ActuatorData to JSON [post] --> {
-    "timeStamp": "2023-11-30 01:38:02.714167",
-    "name": "Not Set",
-    "hasError": false,
-    "statusCode": 0,
-    "isResponse": false,
-    "actuatorType": 0,
-    "command": 0,
-    "stateData": null,
-    "curValue": 0.0
-}
-2023-11-30 01:38:02,714:MqttClientConnector:INFO:Attempting to connect to MQTT broker: localhost
-2023-11-30 01:38:02,716:MqttClientConnector:INFO:[Callback] Connected to MQTT broker. Result code: 0
-2023-11-30 01:38:02,716:MqttClientConnector:INFO:[Callback] Subscribed MID: 1
-2023-11-30 01:38:07,719:MqttClientConnector:INFO:[Callback] Actuator command message received. Topic: PIOT/ConstrainedDevice/ActuatorCmd.
-2023-11-30 01:38:37,723:MqttClientConnector:INFO:Disconnecting from MQTT broker: localhost
-2023-11-30 01:38:37,724:MqttClientConnector:INFO:[Callback] Disconnected from MQTT broker. Result code: 0
+Nov 30, 2023 5:05:57 PM programmingtheiot.gda.connection.MqttClientConnector connectClient
+INFO: Attempting to connect to broker: tcp://localhost:1883
+Nov 30, 2023 5:05:57 PM programmingtheiot.gda.connection.MqttClientConnector connectClient
+INFO: Connected to broker: tcp://localhost:1883
+Nov 30, 2023 5:05:57 PM programmingtheiot.gda.connection.MqttClientConnector connectComplete
+INFO: MQTT connection successful (is reconnect = false). Broker: tcp://localhost:1883
+Nov 30, 2023 5:06:10 PM programmingtheiot.gda.connection.MqttClientConnector disconnectClient
+INFO: Disconnecting from broker...
+Nov 30, 2023 5:06:10 PM programmingtheiot.gda.connection.MqttClientConnector disconnectClient
+INFO: Disconnected from broker: tcp://localhost:1883
+Nov 30, 2023 5:06:10 PM programmingtheiot.part03.integration.connection.MqttClientPerformanceTest execTestPublish
+INFO: Publish message - QoS 0 [100000]: 12616 ms
+Nov 30, 2023 5:06:10 PM programmingtheiot.gda.connection.MqttClientConnector connectClient
+INFO: Attempting to connect to broker: tcp://localhost:1883
+Nov 30, 2023 5:06:10 PM programmingtheiot.gda.connection.MqttClientConnector connectComplete
+INFO: MQTT connection successful (is reconnect = false). Broker: tcp://localhost:1883
+Nov 30, 2023 5:06:10 PM programmingtheiot.gda.connection.MqttClientConnector connectClient
+INFO: Connected to broker: tcp://localhost:1883
+Nov 30, 2023 5:06:29 PM programmingtheiot.gda.connection.MqttClientConnector disconnectClient
+INFO: Disconnecting from broker...
+Nov 30, 2023 5:06:29 PM programmingtheiot.gda.connection.MqttClientConnector disconnectClient
+INFO: Disconnected from broker: tcp://localhost:1883
+Nov 30, 2023 5:06:29 PM programmingtheiot.part03.integration.connection.MqttClientPerformanceTest execTestPublish
+INFO: Publish message - QoS 1 [100000]: 18931 ms
+Nov 30, 2023 5:06:29 PM programmingtheiot.gda.connection.MqttClientConnector connectClient
+INFO: Attempting to connect to broker: tcp://localhost:1883
+Nov 30, 2023 5:06:30 PM programmingtheiot.gda.connection.MqttClientConnector connectComplete
+INFO: MQTT connection successful (is reconnect = false). Broker: tcp://localhost:1883
+Nov 30, 2023 5:06:30 PM programmingtheiot.gda.connection.MqttClientConnector connectClient
+INFO: Connected to broker: tcp://localhost:1883
+Nov 30, 2023 5:07:00 PM programmingtheiot.gda.connection.MqttClientConnector disconnectClient
+INFO: Disconnecting from broker...
+Nov 30, 2023 5:07:00 PM programmingtheiot.gda.connection.MqttClientConnector disconnectClient
+INFO: Disconnected from broker: tcp://localhost:1883
+Nov 30, 2023 5:07:00 PM programmingtheiot.part03.integration.connection.MqttClientPerformanceTest execTestPublish
+INFO: Publish message - QoS 2 [100000]: 30161 ms
+.
 ----------------------------------------------------------------------
-Ran 5 tests in 32.024s
+Ran 1 test in 60.023s
 
-OK (skipped=4)
+OK
 ```
 </details>
 
