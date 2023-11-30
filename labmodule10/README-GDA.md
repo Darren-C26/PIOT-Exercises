@@ -33,15 +33,15 @@ In summary, this class provides a flexible and extensible CoAP client implementa
 ## Code Repository and Branch
 Please click the link before to be directed to the <b>GDA</b> repository.
 
-URL: https://github.com/Darren-C26/piot-java-components/tree/labmodule09
+URL: https://github.com/Darren-C26/piot-java-components/tree/labmodule10
 
 ## UML Design Diagram(s)
 <p align="center">
 
-|![GDA Implementation UML (Module 09)](image-1.png)</p>|
+|![GDA Implementation UML (Module 10)](image-1.png)</p>|
 |-|
 
-<p align="center">GDA Implementation UML (Module09)</p>
+<p align="center">GDA Implementation UML (Module10)</p>
 
 ## Unit Tests Executed
 The unit tests executed for the <b>GDA</b> are listed below. Sample test executions can be seen by clicking on the dropdown icon.
@@ -466,8 +466,6 @@ INFO:  --> WebLink: /PIOT/ConstrainedDevice/SystemPerfMsg. Attributes: org.eclip
 
 <br>
 
-<b>New Tests Executed:</b>
-
 <details close>
 <summary>CoapClientConnectorTest (testConnectAndDiscover)</summary>
 
@@ -663,6 +661,69 @@ INFO: Observing resource [START]: coap://localhost:5683/PIOT/GatewayDevice/MgmtS
 [main] INFO org.eclipse.californium.elements.UDPConnector - UDPConnector listening on /[0:0:0:0:0:0:0:0]:65208, recv buf = 65536, send buf = 65536, recv packet size = 2048
 [main] INFO org.eclipse.californium.core.network.CoapEndpoint - coap Started endpoint at coap://[0:0:0:0:0:0:0:0]:65208
 [main] INFO org.eclipse.californium.core.network.EndpointManager - created implicit endpoint coap://[0:0:0:0:0:0:0:0]:65208 for coap
+```
+</details>
+
+<br>
+
+<b>New Tests Executed:</b>
+
+<details close>
+<summary>DeviceDataManagerCallbackTest</summary>
+
+```
+2023-11-30 01:32:11,435:DeviceDataManagerCallbackTest:INFO:Testing DeviceDataManager class...
+2023-11-30 01:32:11,435:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-11-30 01:32:11,435:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-11-30 01:32:11,435:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001FDDDB0A410>
+2023-11-30 01:32:11,436:MqttClientConnector:INFO:	MQTT Client ID:   DeviceDataMQTT
+2023-11-30 01:32:11,436:MqttClientConnector:INFO:	MQTT Broker Host: 127.0.0.1
+2023-11-30 01:32:11,436:MqttClientConnector:INFO:	MQTT Broker Port: 1883
+2023-11-30 01:32:11,436:MqttClientConnector:INFO:	MQTT Keep Alive:  60
+2023-11-30 01:32:11,436:DeviceDataManager:INFO:Actuator data: name=Not Set,typeID=1001,timeStamp=2023-11-30T06:32:11.436946+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-11-30 01:32:11,436:DeviceDataManager:INFO:Processing actuator command message.
+
+E
+
+Ran 1 test in 0.004s
+
+OK
+```
+</details>
+
+<br>
+
+<details close>
+<summary>MQTTClientConnectorTest (testActuatorCmdPubSub)</summary>
+
+```
+2023-11-30 01:38:02,713:MqttClientConnector:INFO:Using requested client ID: CDAMqttClientConnectorTest001
+2023-11-30 01:38:02,713:MqttClientConnector:INFO:	MQTT Broker Host: localhost
+2023-11-30 01:38:02,713:MqttClientConnector:INFO:	MQTT Broker Port: 1883
+2023-11-30 01:38:02,713:MqttClientConnector:INFO:	MQTT Keep Alive:  30
+2023-11-30 01:38:02,714:DataUtil:INFO:Created DataUtil instance.
+2023-11-30 01:38:02,714:DataUtil:DEBUG:Encoding ActuatorData to JSON [pre]  --> name=Not Set,timeStamp=2023-11-30 01:38:02.714167,command=0,hasError=False,statusCode=0,stateData=None,curValue=0.0,actuatorType=0
+2023-11-30 01:38:02,714:DataUtil:INFO:Encoding ActuatorData to JSON [post] --> {
+    "timeStamp": "2023-11-30 01:38:02.714167",
+    "name": "Not Set",
+    "hasError": false,
+    "statusCode": 0,
+    "isResponse": false,
+    "actuatorType": 0,
+    "command": 0,
+    "stateData": null,
+    "curValue": 0.0
+}
+2023-11-30 01:38:02,714:MqttClientConnector:INFO:Attempting to connect to MQTT broker: localhost
+2023-11-30 01:38:02,716:MqttClientConnector:INFO:[Callback] Connected to MQTT broker. Result code: 0
+2023-11-30 01:38:02,716:MqttClientConnector:INFO:[Callback] Subscribed MID: 1
+2023-11-30 01:38:07,719:MqttClientConnector:INFO:[Callback] Actuator command message received. Topic: PIOT/ConstrainedDevice/ActuatorCmd.
+2023-11-30 01:38:37,723:MqttClientConnector:INFO:Disconnecting from MQTT broker: localhost
+2023-11-30 01:38:37,724:MqttClientConnector:INFO:[Callback] Disconnected from MQTT broker. Result code: 0
+----------------------------------------------------------------------
+Ran 5 tests in 32.024s
+
+OK (skipped=4)
 ```
 </details>
 
