@@ -21,10 +21,10 @@ URL: https://github.com/Darren-C26/piot-python-components/tree/labmodule10
 ## UML Design Diagram(s)
 <p align="center">
 
-|![CDA Implementation UML (Module09)](image.png)</p>|
+|![CDA Implementation UML (Module10)](image.png)</p>|
 |-|
 
-<p align="center">CDA Implementation UML (Module09)</p>
+<p align="center">CDA Implementation UML (Module10)</p>
 
 <br>
 
@@ -1483,4 +1483,116 @@ F2023-11-29 23:43:24,252:MqttClientConnector:INFO:MQTT client subscribed: <paho.
 ```
 
 </details>
+<br>
+
+<details close>
+<summary>MQTTClientConnectorTest</summary>
+
+```
+2023-11-30 00:45:24,960:MqttClientConnectorTest:INFO:Testing MqttClientConnector class...
+2023-11-30 00:45:24,961:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-11-30 00:45:24,962:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-11-30 00:45:24,962:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x0000020C5CF01DB0>
+2023-11-30 00:45:24,962:MqttClientConnector:INFO:	MQTT Client ID:   MqttclientTest
+2023-11-30 00:45:24,962:MqttClientConnector:INFO:	MQTT Broker Host: 127.0.0.1
+2023-11-30 00:45:24,962:MqttClientConnector:INFO:	MQTT Broker Port: 1883
+2023-11-30 00:45:24,962:MqttClientConnector:INFO:	MQTT Keep Alive:  60
+sssss2023-11-30 00:45:24,962:MqttClientConnector:INFO:MQTT client connecting to broker at host: 127.0.0.1
+2023-11-30 00:45:24,969:MqttClientConnector:INFO:[Callback] Connected to MQTT broker. Result code: 0
+2023-11-30 00:45:24,969:MqttClientConnector:INFO:MQTT client subscribed: <paho.mqtt.client.Client object at 0x0000020C5CF01E10>
+```
+
+</details>
+<br>
+
+<details close>
+<summary>DeviceDataManagerCallbackTest</summary>
+
+```
+2023-11-30 01:32:11,435:DeviceDataManagerCallbackTest:INFO:Testing DeviceDataManager class...
+2023-11-30 01:32:11,435:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-11-30 01:32:11,435:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-11-30 01:32:11,435:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000001FDDDB0A410>
+2023-11-30 01:32:11,436:MqttClientConnector:INFO:	MQTT Client ID:   DeviceDataMQTT
+2023-11-30 01:32:11,436:MqttClientConnector:INFO:	MQTT Broker Host: 127.0.0.1
+2023-11-30 01:32:11,436:MqttClientConnector:INFO:	MQTT Broker Port: 1883
+2023-11-30 01:32:11,436:MqttClientConnector:INFO:	MQTT Keep Alive:  60
+2023-11-30 01:32:11,436:DeviceDataManager:INFO:Actuator data: name=Not Set,typeID=1001,timeStamp=2023-11-30T06:32:11.436946+00:00,statusCode=0,hasError=False,locationID=constraineddevice001,elevation=0.0,latitude=0.0,longitude=0.0
+2023-11-30 01:32:11,436:DeviceDataManager:INFO:Processing actuator command message.
+
+E
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+OK
+```
+</details>
+
+<br>
+
+<details close>
+<summary>MQTTClientConnectorTest (testActuatorCmdPubSub)</summary>
+
+```
+2023-11-30 01:38:02,713:MqttClientConnector:INFO:Using requested client ID: CDAMqttClientConnectorTest001
+2023-11-30 01:38:02,713:MqttClientConnector:INFO:	MQTT Broker Host: localhost
+2023-11-30 01:38:02,713:MqttClientConnector:INFO:	MQTT Broker Port: 1883
+2023-11-30 01:38:02,713:MqttClientConnector:INFO:	MQTT Keep Alive:  30
+2023-11-30 01:38:02,714:DataUtil:INFO:Created DataUtil instance.
+2023-11-30 01:38:02,714:DataUtil:DEBUG:Encoding ActuatorData to JSON [pre]  --> name=Not Set,timeStamp=2023-11-30 01:38:02.714167,command=0,hasError=False,statusCode=0,stateData=None,curValue=0.0,actuatorType=0
+2023-11-30 01:38:02,714:DataUtil:INFO:Encoding ActuatorData to JSON [post] --> {
+    "timeStamp": "2023-11-30 01:38:02.714167",
+    "name": "Not Set",
+    "hasError": false,
+    "statusCode": 0,
+    "isResponse": false,
+    "actuatorType": 0,
+    "command": 0,
+    "stateData": null,
+    "curValue": 0.0
+}
+2023-11-30 01:38:02,714:MqttClientConnector:INFO:Attempting to connect to MQTT broker: localhost
+2023-11-30 01:38:02,716:MqttClientConnector:INFO:[Callback] Connected to MQTT broker. Result code: 0
+2023-11-30 01:38:02,716:MqttClientConnector:INFO:[Callback] Subscribed MID: 1
+2023-11-30 01:38:07,719:MqttClientConnector:INFO:[Callback] Actuator command message received. Topic: PIOT/ConstrainedDevice/ActuatorCmd.
+2023-11-30 01:38:37,723:MqttClientConnector:INFO:Disconnecting from MQTT broker: localhost
+2023-11-30 01:38:37,724:MqttClientConnector:INFO:[Callback] Disconnected from MQTT broker. Result code: 0
+----------------------------------------------------------------------
+Ran 5 tests in 32.024s
+
+OK (skipped=4)
+```
+</details>
+
+<br>
+
+<details close>
+<summary>DeviceDataManagerIntegrationTest</summary>
+
+```
+2023-11-30 01:40:38,710:DeviceDataManagerIntegrationTest:INFO:Testing DeviceDataManager class...
+2023-11-30 01:40:38,710:ConfigUtil:INFO:Loading config: ../../../../../../../config/PiotConfig.props
+2023-11-30 01:40:38,711:ConfigUtil:DEBUG:Config: ['Mqtt.GatewayService', 'Coap.GatewayService', 'ConstrainedDevice']
+2023-11-30 01:40:38,711:ConfigUtil:INFO:Created instance of ConfigUtil: <programmingtheiot.common.ConfigUtil.ConfigUtil object at 0x000002726949A1D0>
+2023-11-30 01:40:38,712:MqttClientConnector:INFO:	MQTT Client ID:   DeviceDataMQTT
+2023-11-30 01:40:38,712:MqttClientConnector:INFO:	MQTT Broker Host: 127.0.0.1
+2023-11-30 01:40:38,712:MqttClientConnector:INFO:	MQTT Broker Port: 1883
+2023-11-30 01:40:38,712:MqttClientConnector:INFO:	MQTT Keep Alive:  60
+2023-11-30 01:40:38,712:DeviceDataManager:INFO:Starting DeviceDataManager...
+2023-11-30 01:40:38,712:MqttClientConnector:INFO:MQTT client connecting to broker at host: 127.0.0.1
+2023-11-30 01:40:38,718:MqttClientConnector:INFO:[Callback] Connected to MQTT broker. Result code: 0
+2023-11-30 01:40:38,718:DeviceDataManager:INFO:Started DeviceDataManager.
+2023-11-30 01:40:38,719:MqttClientConnector:INFO:MQTT client subscribed: <paho.mqtt.client.Client object at 0x000002726949A140>
+2023-11-30 01:40:38,719:MqttClientConnector:INFO:MQTT client subscribed: <paho.mqtt.client.Client object at 0x000002726949A140>
+2023-11-30 01:41:38,732:DeviceDataManager:INFO:Stopping DeviceDataManager...
+2023-11-30 01:41:38,732:MqttClientConnector:INFO:Disconnecting MQTT client from broker: 127.0.0.1
+2023-11-30 01:41:38,733:DeviceDataManager:INFO:Stopped DeviceDataManager.
+.
+----------------------------------------------------------------------
+Ran 1 test in 60.023s
+
+OK
+```
+</details>
+
 <br>
